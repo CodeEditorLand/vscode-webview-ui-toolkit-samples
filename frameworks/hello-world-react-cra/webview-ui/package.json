@@ -1,12 +1,13 @@
 {
   "name": "hello-world",
   "version": "0.0.1",
-  "private": true,
+  "private": "false",
   "scripts": {
     "start": "EXTEND_ESLINT=true react-scripts start",
     "build": "node ./scripts/build-react-no-split.js",
     "test": "EXTEND_ESLINT=true react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepublishOnly": "TypeScriptESBuild Source/**/*.ts"
   },
   "dependencies": {
     "@vscode/webview-ui-toolkit": "1.2.2",
@@ -20,16 +21,8 @@
     "@types/vscode-webview": "1.57.3",
     "react-scripts": "5.0.1",
     "rewire": "7.0.0",
-    "typescript": "5.2.2"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "rules": {
-      "no-unused-expressions": "off"
-    }
+    "typescript": "5.2.2",
+    "typescript-esbuild": "0.3.1"
   },
   "browserslist": {
     "production": [
@@ -42,5 +35,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
+  "bugs": {
+    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Nikola Hristov",
+    "email": "nikola@nikolahristov.tech",
+    "url": "https://nikolahristov.tech"
   }
 }
