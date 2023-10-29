@@ -1,12 +1,37 @@
 {
   "name": "hello-world-react-vite",
   "displayName": "hello-world-react-vite",
-  "description": "A hello world sample extension to demonstrate using React + Vite with the Webview UI Toolkit for VS Code.",
   "version": "0.0.1",
-  "engines": {
-    "vscode": "1.75.0"
+  "private": "false",
+  "description": "A hello world sample extension to demonstrate using React + Vite with the Webview UI Toolkit for VS Code.",
+  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
+  "bugs": {
+    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Nikola Hristov",
+    "email": "nikola@nikolahristov.tech",
+    "url": "https://nikolahristov.tech"
+  },
+  "publisher": "playform",
+  "type": "module",
   "main": "./out/extension.js",
+  "scripts": {
+    "build:webview": "cd webview-ui && npm run build",
+    "compile": "tsc -p ./",
+    "install:all": "npm install && cd webview-ui && npm install",
+    "lint": "eslint src --ext ts",
+    "prepublishOnly": "TypeScriptESBuild Source/**/*.ts",
+    "start:webview": "cd webview-ui && npm run start",
+    "pretest": "npm run compile && npm run lint",
+    "vscode:prepublish": "npm run compile",
+    "watch": "tsc -watch -p ./"
+  },
   "contributes": {
     "commands": [
       {
@@ -14,17 +39,6 @@
         "title": "Hello World (React + Vite): Show"
       }
     ]
-  },
-  "scripts": {
-    "install:all": "npm install && cd webview-ui && npm install",
-    "start:webview": "cd webview-ui && npm run start",
-    "build:webview": "cd webview-ui && npm run build",
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
-    "prepublishOnly": "TypeScriptESBuild Source/**/*.ts"
   },
   "devDependencies": {
     "@types/glob": "8.1.0",
@@ -36,26 +50,13 @@
     "glob": "10.3.10",
     "prettier": "3.0.3",
     "typescript": "5.2.2",
-    "vscode-test": "1.5.0",
-    "typescript-esbuild": "0.3.1"
+    "typescript-esbuild": "0.3.1",
+    "vscode-test": "1.5.0"
   },
-  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
-  "bugs": {
-    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
+  "engines": {
+    "vscode": "1.75.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
-  },
-  "license": "MIT",
-  "type": "module",
-  "private": "false",
   "publishConfig": {
     "access": "public"
-  },
-  "author": {
-    "name": "Nikola Hristov",
-    "email": "nikola@nikolahristov.tech",
-    "url": "https://nikolahristov.tech"
   }
 }

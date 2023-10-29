@@ -2,23 +2,6 @@
   "name": "hello-world",
   "version": "0.0.1",
   "private": "false",
-  "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "prepublishOnly": "TypeScriptESBuild Source/**/*.ts"
-  },
-  "dependencies": {
-    "@vscode/webview-ui-toolkit": "1.2.2",
-    "solid-js": "1.8.4"
-  },
-  "devDependencies": {
-    "@types/vscode-webview": "1.57.3",
-    "typescript": "5.2.2",
-    "vite": "4.5.0",
-    "vite-plugin-solid": "2.7.2",
-    "typescript-esbuild": "0.3.1"
-  },
   "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
   "bugs": {
     "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
@@ -28,13 +11,31 @@
     "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
   },
   "license": "MIT",
-  "type": "module",
-  "publishConfig": {
-    "access": "public"
-  },
   "author": {
     "name": "Nikola Hristov",
     "email": "nikola@nikolahristov.tech",
     "url": "https://nikolahristov.tech"
+  },
+  "publisher": "playform",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "prepublishOnly": "TypeScriptESBuild Source/**/*.ts",
+    "serve": "vite preview",
+    "start": "vite"
+  },
+  "dependencies": {
+    "@vscode/webview-ui-toolkit": "1.2.2",
+    "solid-js": "1.8.4"
+  },
+  "devDependencies": {
+    "@types/vscode-webview": "1.57.3",
+    "typescript": "5.2.2",
+    "typescript-esbuild": "0.3.1",
+    "vite": "4.5.0",
+    "vite-plugin-solid": "2.7.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

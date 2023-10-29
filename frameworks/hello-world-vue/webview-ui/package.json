@@ -2,12 +2,28 @@
   "name": "hello-world",
   "version": "0.0.1",
   "private": "false",
+  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
+  "bugs": {
+    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Nikola Hristov",
+    "email": "nikola@nikolahristov.tech",
+    "url": "https://nikolahristov.tech"
+  },
+  "publisher": "playform",
+  "type": "module",
   "scripts": {
-    "start": "vite",
     "build": "vue-tsc --noEmit && vite build",
+    "prepublishOnly": "TypeScriptESBuild Source/**/*.ts",
     "preview": "vite preview --port 5050",
-    "typecheck": "vue-tsc --noEmit",
-    "prepublishOnly": "TypeScriptESBuild Source/**/*.ts"
+    "start": "vite",
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@vscode/webview-ui-toolkit": "1.2.2",
@@ -19,26 +35,11 @@
     "@vitejs/plugin-vue": "4.4.0",
     "@vue/tsconfig": "0.4.0",
     "typescript": "~5.2.2",
+    "typescript-esbuild": "0.3.1",
     "vite": "4.5.0",
-    "vue-tsc": "1.8.22",
-    "typescript-esbuild": "0.3.1"
+    "vue-tsc": "1.8.22"
   },
-  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
-  "bugs": {
-    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
-  },
-  "license": "MIT",
-  "type": "module",
   "publishConfig": {
     "access": "public"
-  },
-  "author": {
-    "name": "Nikola Hristov",
-    "email": "nikola@nikolahristov.tech",
-    "url": "https://nikolahristov.tech"
   }
 }

@@ -1,12 +1,34 @@
 {
   "name": "notepad",
   "displayName": "notepad",
-  "description": "A sample extension that showcases the Webview UI Toolkit for VS Code alongside the VS Code TreeView and Webview API",
   "version": "0.0.1",
-  "engines": {
-    "vscode": "1.75.0"
+  "private": "false",
+  "description": "A sample extension that showcases the Webview UI Toolkit for VS Code alongside the VS Code TreeView and Webview API",
+  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
+  "bugs": {
+    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Nikola Hristov",
+    "email": "nikola@nikolahristov.tech",
+    "url": "https://nikolahristov.tech"
+  },
+  "publisher": "playform",
+  "type": "module",
   "main": "./out/extension.js",
+  "scripts": {
+    "compile": "node ./esbuild.js",
+    "lint": "eslint src --ext ts",
+    "package": "NODE_ENV=production node ./esbuild.js",
+    "prepublishOnly": "TypeScriptESBuild Source/**/*.ts",
+    "vscode:prepublish": "npm run package",
+    "watch": "node ./esbuild.js --watch"
+  },
   "contributes": {
     "commands": [
       {
@@ -18,31 +40,6 @@
         "command": "notepad.deleteNote",
         "title": "Notepad: Delete note",
         "icon": "$(trash)"
-      }
-    ],
-    "viewsContainers": {
-      "activitybar": [
-        {
-          "id": "notepad",
-          "title": "Notepad",
-          "icon": "$(notebook)"
-        }
-      ]
-    },
-    "views": {
-      "notepad": [
-        {
-          "id": "notepad.notesList",
-          "name": "My Notes",
-          "type": "tree",
-          "visibility": "visible"
-        }
-      ]
-    },
-    "viewsWelcome": [
-      {
-        "view": "notepad.notesList",
-        "contents": "No notes yet!\n[Create a note](command:notepad.createNote)"
       }
     ],
     "menus": {
@@ -58,15 +55,36 @@
           "group": "inline"
         }
       ]
-    }
+    },
+    "views": {
+      "notepad": [
+        {
+          "id": "notepad.notesList",
+          "name": "My Notes",
+          "type": "tree",
+          "visibility": "visible"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "notepad",
+          "title": "Notepad",
+          "icon": "$(notebook)"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "notepad.notesList",
+        "contents": "No notes yet!\n[Create a note](command:notepad.createNote)"
+      }
+    ]
   },
-  "scripts": {
-    "vscode:prepublish": "npm run package",
-    "compile": "node ./esbuild.js",
-    "package": "NODE_ENV=production node ./esbuild.js",
-    "watch": "node ./esbuild.js --watch",
-    "lint": "eslint src --ext ts",
-    "prepublishOnly": "TypeScriptESBuild Source/**/*.ts"
+  "dependencies": {
+    "@vscode/webview-ui-toolkit": "1.2.2",
+    "uuid": "9.0.1"
   },
   "devDependencies": {
     "@types/glob": "8.1.0",
@@ -84,27 +102,10 @@
     "typescript": "5.2.2",
     "typescript-esbuild": "0.3.1"
   },
-  "dependencies": {
-    "@vscode/webview-ui-toolkit": "1.2.2",
-    "uuid": "9.0.1"
+  "engines": {
+    "vscode": "1.75.0"
   },
-  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
-  "bugs": {
-    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
-  },
-  "license": "MIT",
-  "type": "module",
-  "private": "false",
   "publishConfig": {
     "access": "public"
-  },
-  "author": {
-    "name": "Nikola Hristov",
-    "email": "nikola@nikolahristov.tech",
-    "url": "https://nikolahristov.tech"
   }
 }
