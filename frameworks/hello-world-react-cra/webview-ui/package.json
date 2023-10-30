@@ -1,58 +1,58 @@
 {
-  "name": "hello-world",
-  "version": "0.0.1",
-  "private": "false",
-  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
-  "bugs": {
-    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Nikola Hristov",
-    "email": "nikola@nikolahristov.tech",
-    "url": "https://nikolahristov.tech"
-  },
-  "publisher": "playform",
-  "type": "module",
-  "scripts": {
-    "build": "node ./scripts/build-react-no-split.js",
-    "eject": "react-scripts eject",
-    "prepublishOnly": "TypeScriptESBuild Source/**/*.ts",
-    "start": "EXTEND_ESLINT=true react-scripts start",
-    "test": "EXTEND_ESLINT=true react-scripts test"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "dependencies": {
-    "@vscode/webview-ui-toolkit": "1.2.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "20.8.9",
-    "@types/react": "18.2.33",
-    "@types/react-dom": "18.2.14",
-    "@types/vscode-webview": "1.57.3",
-    "react-scripts": "5.0.1",
-    "rewire": "7.0.0",
-    "typescript": "5.2.2",
-    "typescript-esbuild": "0.3.1"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "hello-world",
+	"version": "0.0.1",
+	"private": "false",
+	"homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Nikola Hristov",
+		"email": "nikola@nikolahristov.tech",
+		"url": "https://nikolahristov.tech"
+	},
+	"publisher": "playform",
+	"type": "module",
+	"scripts": {
+		"build": "node ./scripts/build-react-no-split.js",
+		"eject": "react-scripts eject",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"start": "EXTEND_ESLINT=true react-scripts start",
+		"test": "EXTEND_ESLINT=true react-scripts test"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"dependencies": {
+		"@vscode/webview-ui-toolkit": "1.2.2",
+		"react": "18.2.0",
+		"react-dom": "18.2.0"
+	},
+	"devDependencies": {
+		"@types/node": "20.8.9",
+		"@types/react": "18.2.33",
+		"@types/react-dom": "18.2.14",
+		"@types/vscode-webview": "1.57.3",
+		"react-scripts": "5.0.1",
+		"rewire": "7.0.0",
+		"typescript": "5.2.2",
+		"typescript-esbuild": "0.3.1"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }

@@ -1,45 +1,45 @@
 {
-  "name": "hello-world",
-  "version": "0.0.1",
-  "private": "false",
-  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
-  "bugs": {
-    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Nikola Hristov",
-    "email": "nikola@nikolahristov.tech",
-    "url": "https://nikolahristov.tech"
-  },
-  "publisher": "playform",
-  "type": "module",
-  "scripts": {
-    "build": "vue-tsc --noEmit && vite build",
-    "prepublishOnly": "TypeScriptESBuild Source/**/*.ts",
-    "preview": "vite preview --port 5050",
-    "start": "vite",
-    "typecheck": "vue-tsc --noEmit"
-  },
-  "dependencies": {
-    "@vscode/webview-ui-toolkit": "1.2.2",
-    "vue": "3.3.7"
-  },
-  "devDependencies": {
-    "@types/node": "20.8.9",
-    "@types/vscode-webview": "1.57.3",
-    "@vitejs/plugin-vue": "4.4.0",
-    "@vue/tsconfig": "0.4.0",
-    "typescript": "~5.2.2",
-    "typescript-esbuild": "0.3.1",
-    "vite": "4.5.0",
-    "vue-tsc": "1.8.22"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "hello-world",
+	"version": "0.0.1",
+	"private": "false",
+	"homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Nikola Hristov",
+		"email": "nikola@nikolahristov.tech",
+		"url": "https://nikolahristov.tech"
+	},
+	"publisher": "playform",
+	"type": "module",
+	"scripts": {
+		"build": "vue-tsc --noEmit && vite build",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"preview": "vite preview --port 5050",
+		"start": "vite",
+		"typecheck": "vue-tsc --noEmit"
+	},
+	"dependencies": {
+		"@vscode/webview-ui-toolkit": "1.2.2",
+		"vue": "3.3.7"
+	},
+	"devDependencies": {
+		"@types/node": "20.8.9",
+		"@types/vscode-webview": "1.57.3",
+		"@vitejs/plugin-vue": "4.4.0",
+		"@vue/tsconfig": "0.4.0",
+		"typescript": "~5.2.2",
+		"typescript-esbuild": "0.3.1",
+		"vite": "4.5.0",
+		"vue-tsc": "1.8.22"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }

@@ -1,5 +1,8 @@
 import { Component } from "@angular/core";
-import { provideVSCodeDesignSystem, vsCodeButton } from "@vscode/webview-ui-toolkit";
+import {
+	provideVSCodeDesignSystem,
+	vsCodeButton,
+} from "@vscode/webview-ui-toolkit";
 import { vscode } from "./utilities/vscode";
 
 // In order to use the Webview UI Toolkit web components they
@@ -15,24 +18,24 @@ provideVSCodeDesignSystem().register(vsCodeButton());
 //   vsCodeButton(),
 //   vsCodeCheckbox()
 // );
-// 
+//
 // Finally, if you would like to register all of the toolkit
 // components at once, there's a handy convenience function:
 //
 // provideVSCodeDesignSystem().register(allComponents);
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"],
+	selector: "app-root",
+	templateUrl: "./app.component.html",
+	styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  title = "hello-world";
+	title = "hello-world";
 
-  handleHowdyClick() {
-    vscode.postMessage({
-      command: "hello",
-      text: "Hey there partner! 🤠",
-    });
-  }
+	handleHowdyClick() {
+		vscode.postMessage({
+			command: "hello",
+			text: "Hey there partner! 🤠",
+		});
+	}
 }

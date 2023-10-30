@@ -1,63 +1,63 @@
 {
-  "name": "hello-world",
-  "displayName": "hello-world",
-  "version": "0.0.1",
-  "private": "false",
-  "description": "A hello world sample extension to show off the Webview UI Toolkit for Visual Studio Code.",
-  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
-  "bugs": {
-    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Nikola Hristov",
-    "email": "nikola@nikolahristov.tech",
-    "url": "https://nikolahristov.tech"
-  },
-  "publisher": "playform",
-  "type": "module",
-  "main": "./out/extension.js",
-  "scripts": {
-    "compile": "node ./esbuild.js",
-    "lint": "eslint src --ext ts",
-    "package": "NODE_ENV=production node ./esbuild.js",
-    "prepublishOnly": "TypeScriptESBuild Source/**/*.ts",
-    "vscode:prepublish": "npm run package",
-    "watch": "node ./esbuild.js --watch"
-  },
-  "contributes": {
-    "commands": [
-      {
-        "command": "hello-world.showHelloWorld",
-        "title": "Hello World: Show"
-      }
-    ]
-  },
-  "dependencies": {
-    "@vscode/webview-ui-toolkit": "1.2.2"
-  },
-  "devDependencies": {
-    "@types/glob": "8.1.0",
-    "@types/node": "20.x",
-    "@types/vscode": "1.83.1",
-    "@types/vscode-webview": "1.57.3",
-    "@typescript-eslint/eslint-plugin": "6.9.0",
-    "@typescript-eslint/parser": "6.9.0",
-    "esbuild": "0.19.5",
-    "eslint": "8.52.0",
-    "glob": "10.3.10",
-    "prettier": "3.0.3",
-    "typescript": "5.2.2",
-    "typescript-esbuild": "0.3.1"
-  },
-  "engines": {
-    "vscode": "1.75.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "hello-world",
+	"displayName": "hello-world",
+	"version": "0.0.1",
+	"private": "false",
+	"description": "A hello world sample extension to show off the Webview UI Toolkit for Visual Studio Code.",
+	"homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Nikola Hristov",
+		"email": "nikola@nikolahristov.tech",
+		"url": "https://nikolahristov.tech"
+	},
+	"publisher": "playform",
+	"type": "module",
+	"main": "./out/extension.js",
+	"scripts": {
+		"compile": "node ./esbuild.js",
+		"lint": "eslint src --ext ts",
+		"package": "NODE_ENV=production node ./esbuild.js",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"vscode:prepublish": "npm run package",
+		"watch": "node ./esbuild.js --watch"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "hello-world.showHelloWorld",
+				"title": "Hello World: Show"
+			}
+		]
+	},
+	"dependencies": {
+		"@vscode/webview-ui-toolkit": "1.2.2"
+	},
+	"devDependencies": {
+		"@types/glob": "8.1.0",
+		"@types/node": "20.x",
+		"@types/vscode": "1.83.1",
+		"@types/vscode-webview": "1.57.3",
+		"@typescript-eslint/eslint-plugin": "6.9.0",
+		"@typescript-eslint/parser": "6.9.0",
+		"esbuild": "0.19.5",
+		"eslint": "8.52.0",
+		"glob": "10.3.10",
+		"prettier": "3.0.3",
+		"typescript": "5.2.2",
+		"typescript-esbuild": "0.3.1"
+	},
+	"engines": {
+		"vscode": "1.75.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
