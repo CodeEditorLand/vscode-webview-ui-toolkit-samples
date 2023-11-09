@@ -1,7 +1,6 @@
 # Hello World Sample Extension (Webpack)
 
-This is a version of the Hello World sample extension that uses Webpack instead
-of esbuild.
+This is a version of the Hello World sample extension that uses Webpack instead of esbuild.
 
 ![A screenshot of the sample extension.](./assets/hello-world.png)
 
@@ -21,9 +20,7 @@ npm install
 code .
 ```
 
-Once the sample is open inside VS Code you can run the extension by doing the
-following:
+Once the sample is open inside VS Code you can run the extension by doing the following:
 
 1. Press `F5` to open a new Extension Development Host window
-2. Inside the host window, open the command palette (`Ctrl+Shift+P` or
-   `Cmd+Shift+P` on Mac) and type `Hello World: Show`
+2. Inside the host window, open the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac) and type `Hello World: Show`
