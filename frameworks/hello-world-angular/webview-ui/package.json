@@ -28,7 +28,7 @@
 		"@angular/cli": "~17.0.1",
 		"@angular/compiler-cli": "~17.0.3",
 		"@types/jasmine": "~5.1.2",
-		"@types/node": "20.9.1",
+		"@types/node": "20.9.2",
 		"@types/vscode-webview": "1.57.4",
 		"jasmine-core": "~5.1.1",
 		"karma": "~6.4.2",

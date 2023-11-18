@@ -80,7 +80,6 @@
 		"esbuild-plugin-copy": "2.1.1",
 		"eslint": "8.54.0",
 		"glob": "10.3.10",
-		"prettier": "3.1.0",
 		"typescript": "5.2.2"
 	},
 	"engines": {
