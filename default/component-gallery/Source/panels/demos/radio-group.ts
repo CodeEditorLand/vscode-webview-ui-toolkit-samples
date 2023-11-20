@@ -1,4 +1,4 @@
-// Note: There is a known bug with vscode-radio component selection on first interaction. A workaround fix is 
+// Note: There is a known bug with vscode-radio component selection on first interaction. A workaround fix is
 // to make sure that all radio components have a unique `value` attribute applied as demonstrated below.
 // Read more about the issue here: https://github.com/microsoft/vscode-webview-ui-toolkit/issues/476
 
