@@ -33,7 +33,7 @@
 		"@types/vscode-webview": "1.57.4",
 		"@typescript-eslint/eslint-plugin": "6.11.0",
 		"@typescript-eslint/parser": "6.11.0",
-		"esbuild": "0.19.5",
+		"esbuild": "0.19.6",
 		"esbuild-plugin-copy": "2.1.1",
 		"eslint": "8.54.0",
 		"glob": "10.3.10",
