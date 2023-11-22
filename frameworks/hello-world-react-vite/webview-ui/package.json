@@ -1,9 +1,26 @@
 {
 	"name": "hello-world",
 	"version": "0.0.1",
-	"private": true,
+	"private": "false",
+	"homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Nikola Hristov",
+		"email": "nikola@nikolahristov.tech",
+		"url": "https://nikolahristov.tech"
+	},
+	"publisher": "playform",
+	"type": "module",
 	"scripts": {
 		"build": "tsc && vite build",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
 		"preview": "vite preview",
 		"start": "vite"
 	},
@@ -13,11 +30,15 @@
 		"react-dom": "18.2.0"
 	},
 	"devDependencies": {
-		"@types/react": "18.2.37",
-		"@types/react-dom": "18.2.15",
+		"@types/react": "18.2.38",
+		"@types/react-dom": "18.2.17",
 		"@types/vscode-webview": "1.57.4",
 		"@vitejs/plugin-react": "4.2.0",
-		"typescript": "5.2.2",
-		"vite": "5.0.0"
+		"typescript": "5.3.2",
+		"typescript-esbuild": "0.3.1",
+		"vite": "5.0.2"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
