@@ -1,58 +1,58 @@
 {
-  "name": "editable-data-grid",
-  "displayName": "editable-data-grid",
-  "version": "0.0.1",
-  "private": "false",
-  "description": "A sample extension that demonstrates a solution for making editable data grids.",
-  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
-  "bugs": {
-    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Nikola Hristov",
-    "email": "nikola@nikolahristov.tech",
-    "url": "https://nikolahristov.tech"
-  },
-  "publisher": "playform",
-  "type": "module",
-  "main": "./out/extension.js",
-  "scripts": {
-    "compile": "node ./esbuild.js",
-    "lint": "eslint src --ext ts",
-    "package": "NODE_ENV=production node ./esbuild.js",
-    "prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
-    "vscode:prepublish": "npm run package",
-    "watch": "node ./esbuild.js --watch"
-  },
-  "contributes": {
-    "commands": [
-      {
-        "command": "editable-data-grid.showEditableDataGrid",
-        "title": "Editable Data Grid: Show"
-      }
-    ]
-  },
-  "dependencies": {
-    "@vscode/webview-ui-toolkit": "1.3.1"
-  },
-  "devDependencies": {
-    "@types/glob": "8.1.0",
-    "@types/node": "20.x",
-    "@types/vscode": "1.84.2",
-    "@types/vscode-webview": "1.57.4",
-    "@typescript-eslint/eslint-plugin": "6.12.0",
-    "@typescript-eslint/parser": "6.12.0",
-    "esbuild": "0.19.8",
-    "glob": "10.3.10",
-    "typescript": "5.3.2",
-    "typescript-esbuild": "0.3.1"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "editable-data-grid",
+	"displayName": "editable-data-grid",
+	"version": "0.0.1",
+	"private": "false",
+	"description": "A sample extension that demonstrates a solution for making editable data grids.",
+	"homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Nikola Hristov",
+		"email": "nikola@nikolahristov.tech",
+		"url": "https://nikolahristov.tech"
+	},
+	"publisher": "playform",
+	"type": "module",
+	"main": "./out/extension.js",
+	"scripts": {
+		"compile": "node ./esbuild.js",
+		"lint": "eslint src --ext ts",
+		"package": "NODE_ENV=production node ./esbuild.js",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"vscode:prepublish": "npm run package",
+		"watch": "node ./esbuild.js --watch"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "editable-data-grid.showEditableDataGrid",
+				"title": "Editable Data Grid: Show"
+			}
+		]
+	},
+	"dependencies": {
+		"@vscode/webview-ui-toolkit": "1.3.1"
+	},
+	"devDependencies": {
+		"@types/glob": "8.1.0",
+		"@types/node": "20.x",
+		"@types/vscode": "1.84.2",
+		"@types/vscode-webview": "1.57.4",
+		"@typescript-eslint/eslint-plugin": "6.12.0",
+		"@typescript-eslint/parser": "6.12.0",
+		"esbuild": "0.19.8",
+		"glob": "10.3.10",
+		"typescript": "5.3.2",
+		"typescript-esbuild": "0.3.1"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
