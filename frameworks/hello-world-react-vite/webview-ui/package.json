@@ -35,8 +35,8 @@
 		"@types/vscode-webview": "1.57.4",
 		"@vitejs/plugin-react": "4.2.0",
 		"typescript": "5.3.2",
-		"typescript-esbuild": "0.3.1",
-		"vite": "5.0.4"
+		"typescript-esbuild": "0.3.2",
+		"vite": "5.0.5"
 	},
 	"publishConfig": {
 		"access": "public"
