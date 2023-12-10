@@ -1,7 +1,6 @@
 # Extension commands
 
-A quick run down of some of the important commands that can be run when at the
-root of the project.
+A quick run down of some of the important commands that can be run when at the root of the project.
 
 ```
 npm run install:all      Install package dependencies for both the extension and Angular webview source code.
