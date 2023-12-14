@@ -19,15 +19,15 @@
     "watch": "node ./esbuild.js --watch"
   },
   "devDependencies": {
-    "@types/glob": "8.0.0",
-    "@types/node": "16.x",
-    "@types/vscode": "1.74.0",
-    "@types/vscode-webview": "1.57.0",
-    "esbuild": "0.16.10",
-    "glob": "8.0.3",
-    "typescript": "4.8.4"
+    "@types/glob": "8.1.0",
+    "@types/node": "20.x",
+    "@types/vscode": "1.85.0",
+    "@types/vscode-webview": "1.57.4",
+    "esbuild": "0.19.9",
+    "glob": "10.3.10",
+    "typescript": "5.3.3"
   },
   "dependencies": {
-    "@vscode/webview-ui-toolkit": "1.2.2"
+    "@vscode/webview-ui-toolkit": "1.4.0"
   }
 }
