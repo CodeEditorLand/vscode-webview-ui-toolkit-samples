@@ -1,32 +1,32 @@
 {
-  "name": "hello-world-vue",
-  "displayName": "hello-world-vue",
-  "description": "A hello world sample extension to demonstrate using Vue with the Webview UI Toolkit for VS Code.",
-  "version": "0.0.1",
-  "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "hello-world.showHelloWorld",
-        "title": "Hello World (Vue): Show"
-      }
-    ]
-  },
-  "scripts": {
-    "install:all": "npm install && cd webview-ui && npm install",
-    "start:webview": "cd webview-ui && npm run start",
-    "build:webview": "cd webview-ui && npm run build",
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint"
-  },
-  "devDependencies": {
-    "@types/glob": "8.1.0",
-    "@types/node": "20.10.4",
-    "@types/vscode": "1.85.0",
-    "glob": "10.3.10",
-    "typescript": "5.3.3",
-    "vscode-test": "1.5.0"
-  }
+	"name": "hello-world-vue",
+	"displayName": "hello-world-vue",
+	"version": "0.0.1",
+	"description": "A hello world sample extension to demonstrate using Vue with the Webview UI Toolkit for VS Code.",
+	"main": "./out/extension.js",
+	"scripts": {
+		"build:webview": "cd webview-ui && npm run build",
+		"compile": "tsc -p ./",
+		"install:all": "npm install && cd webview-ui && npm install",
+		"start:webview": "cd webview-ui && npm run start",
+		"pretest": "npm run compile && npm run lint",
+		"vscode:prepublish": "npm run compile",
+		"watch": "tsc -watch -p ./"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "hello-world.showHelloWorld",
+				"title": "Hello World (Vue): Show"
+			}
+		]
+	},
+	"devDependencies": {
+		"@types/glob": "8.1.0",
+		"@types/node": "20.10.5",
+		"@types/vscode": "1.85.0",
+		"glob": "10.3.10",
+		"typescript": "5.3.3",
+		"vscode-test": "1.5.0"
+	}
 }

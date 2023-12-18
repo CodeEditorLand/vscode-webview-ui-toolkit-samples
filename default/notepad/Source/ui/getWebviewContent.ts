@@ -15,7 +15,7 @@ import { getNonce } from "../utilities/getNonce";
 export function getWebviewContent(
 	webview: Webview,
 	extensionUri: Uri,
-	note: Note,
+	note: Note
 ) {
 	const webviewUri = getUri(webview, extensionUri, ["out", "webview.js"]);
 	const styleUri = getUri(webview, extensionUri, ["out", "style.css"]);

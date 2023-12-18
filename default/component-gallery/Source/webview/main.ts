@@ -45,7 +45,7 @@ function main() {
 
 	// Define data grid with custom titles
 	const basicDataGridList = document.querySelectorAll(
-		".basic-grid",
+		".basic-grid"
 	) as NodeListOf<DataGrid>;
 	for (const basicDataGrid of basicDataGridList) {
 		basicDataGrid.rowsData = [

@@ -1,33 +1,33 @@
 {
-  "name": "hello-world",
-  "displayName": "hello-world",
-  "description": "A hello world sample extension to show off the Webview UI Toolkit for Visual Studio Code.",
-  "version": "0.0.1",
-  "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "hello-world.showHelloWorld",
-        "title": "Hello World: Show"
-      }
-    ]
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run package",
-    "compile": "node ./esbuild.js",
-    "package": "NODE_ENV=production node ./esbuild.js",
-    "watch": "node ./esbuild.js --watch"
-  },
-  "devDependencies": {
-    "@types/glob": "8.1.0",
-    "@types/node": "20.x",
-    "@types/vscode": "1.85.0",
-    "@types/vscode-webview": "1.57.4",
-    "esbuild": "0.19.9",
-    "glob": "10.3.10",
-    "typescript": "5.3.3"
-  },
-  "dependencies": {
-    "@vscode/webview-ui-toolkit": "1.4.0"
-  }
+	"name": "hello-world",
+	"displayName": "hello-world",
+	"version": "0.0.1",
+	"description": "A hello world sample extension to show off the Webview UI Toolkit for Visual Studio Code.",
+	"main": "./out/extension.js",
+	"scripts": {
+		"compile": "node ./esbuild.js",
+		"package": "NODE_ENV=production node ./esbuild.js",
+		"vscode:prepublish": "npm run package",
+		"watch": "node ./esbuild.js --watch"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "hello-world.showHelloWorld",
+				"title": "Hello World: Show"
+			}
+		]
+	},
+	"dependencies": {
+		"@vscode/webview-ui-toolkit": "1.4.0"
+	},
+	"devDependencies": {
+		"@types/glob": "8.1.0",
+		"@types/node": "20.x",
+		"@types/vscode": "1.85.0",
+		"@types/vscode-webview": "1.57.4",
+		"esbuild": "0.19.9",
+		"glob": "10.3.10",
+		"typescript": "5.3.3"
+	}
 }

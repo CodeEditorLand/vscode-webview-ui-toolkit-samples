@@ -29,7 +29,7 @@ export function activate(context: ExtensionContext) {
 		() => {
 			const selectedTreeViewItem = treeView.selection[0];
 			const matchingNote = notes.find(
-				(note) => note.id === selectedTreeViewItem.id,
+				(note) => note.id === selectedTreeViewItem.id
 			);
 			if (!matchingNote) {
 				window.showErrorMessage("No matching note found");
@@ -49,7 +49,7 @@ export function activate(context: ExtensionContext) {
 						localResourceRoots: [
 							Uri.joinPath(context.extensionUri, "out"),
 						],
-					},
+					}
 				);
 			}
 
@@ -58,7 +58,7 @@ export function activate(context: ExtensionContext) {
 			panel.webview.html = getWebviewContent(
 				panel.webview,
 				context.extensionUri,
-				matchingNote,
+				matchingNote
 			);
 
 			// If a panel is open and receives an update message, update the notes array and the panel title/html
@@ -70,18 +70,18 @@ export function activate(context: ExtensionContext) {
 						const updatedNoteId = note.id;
 						const copyOfNotesArray = [...notes];
 						const matchingNoteIndex = copyOfNotesArray.findIndex(
-							(note) => note.id === updatedNoteId,
+							(note) => note.id === updatedNoteId
 						);
 						copyOfNotesArray[matchingNoteIndex] = note;
 						notes = copyOfNotesArray;
 						notepadDataProvider.refresh(notes);
 						panel
 							? ((panel.title = note.title),
-							  (panel.webview.html = getWebviewContent(
+								(panel.webview.html = getWebviewContent(
 									panel.webview,
 									context.extensionUri,
-									note,
-							  )))
+									note
+								)))
 							: null;
 						break;
 				}
@@ -93,9 +93,9 @@ export function activate(context: ExtensionContext) {
 					panel = undefined;
 				},
 				null,
-				context.subscriptions,
+				context.subscriptions
 			);
-		},
+		}
 	);
 
 	// Command to create a new note
@@ -119,14 +119,14 @@ export function activate(context: ExtensionContext) {
 		(node: Note) => {
 			const selectedTreeViewItem = node;
 			const selectedNoteIndex = notes.findIndex(
-				(note) => note.id === selectedTreeViewItem.id,
+				(note) => note.id === selectedTreeViewItem.id
 			);
 			notes.splice(selectedNoteIndex, 1);
 			notepadDataProvider.refresh(notes);
 
 			// Close the panel if it's open
 			panel?.dispose();
-		},
+		}
 	);
 
 	// Add commands to the extension context

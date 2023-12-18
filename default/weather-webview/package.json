@@ -1,38 +1,38 @@
 {
-  "name": "vscode-weather-webview",
-  "displayName": "Check the weather",
-  "description": "A sample extension to show off the Webview UI Toolkit for Visual Studio Code being used in a webview view.",
-  "version": "0.0.1",
-  "main": "./out/extension.js",
-  "contributes": {
-    "views": {
-      "explorer": [
-        {
-          "type": "webview",
-          "id": "weather.weatherView",
-          "name": "Weather"
-        }
-      ]
-    }
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run package",
-    "compile": "node ./esbuild.js",
-    "package": "NODE_ENV=production node ./esbuild.js",
-    "watch": "node ./esbuild.js --watch"
-  },
-  "devDependencies": {
-    "@types/glob": "8.1.0",
-    "@types/node": "20.x",
-    "@types/vscode": "1.85.0",
-    "@types/vscode-webview": "1.57.4",
-    "esbuild": "0.19.9",
-    "esbuild-plugin-copy": "2.1.1",
-    "glob": "10.3.10",
-    "typescript": "5.3.3"
-  },
-  "dependencies": {
-    "@vscode/webview-ui-toolkit": "1.4.0",
-    "weather-js": "2.0.0"
-  }
+	"name": "vscode-weather-webview",
+	"displayName": "Check the weather",
+	"version": "0.0.1",
+	"description": "A sample extension to show off the Webview UI Toolkit for Visual Studio Code being used in a webview view.",
+	"main": "./out/extension.js",
+	"scripts": {
+		"compile": "node ./esbuild.js",
+		"package": "NODE_ENV=production node ./esbuild.js",
+		"vscode:prepublish": "npm run package",
+		"watch": "node ./esbuild.js --watch"
+	},
+	"contributes": {
+		"views": {
+			"explorer": [
+				{
+					"type": "webview",
+					"id": "weather.weatherView",
+					"name": "Weather"
+				}
+			]
+		}
+	},
+	"dependencies": {
+		"@vscode/webview-ui-toolkit": "1.4.0",
+		"weather-js": "2.0.0"
+	},
+	"devDependencies": {
+		"@types/glob": "8.1.0",
+		"@types/node": "20.x",
+		"@types/vscode": "1.85.0",
+		"@types/vscode-webview": "1.57.4",
+		"esbuild": "0.19.9",
+		"esbuild-plugin-copy": "2.1.1",
+		"glob": "10.3.10",
+		"typescript": "5.3.3"
+	}
 }

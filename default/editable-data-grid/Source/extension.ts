@@ -7,7 +7,7 @@ export function activate(context: ExtensionContext) {
 		"editable-data-grid.showEditableDataGrid",
 		() => {
 			EditableDataGridPanel.render(context.extensionUri);
-		},
+		}
 	);
 
 	// Add command to the extension context

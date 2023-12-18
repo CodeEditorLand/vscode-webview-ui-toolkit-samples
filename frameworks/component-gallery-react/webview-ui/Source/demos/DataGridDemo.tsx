@@ -35,26 +35,22 @@ export function DataGridDemo() {
 					<VSCodeDataGridRow row-type="header">
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="1"
-						>
+							grid-column="1">
 							column1
 						</VSCodeDataGridCell>
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="2"
-						>
+							grid-column="2">
 							column2
 						</VSCodeDataGridCell>
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="3"
-						>
+							grid-column="3">
 							column3
 						</VSCodeDataGridCell>
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="4"
-						>
+							grid-column="4">
 							column4
 						</VSCodeDataGridCell>
 					</VSCodeDataGridRow>
@@ -82,26 +78,22 @@ export function DataGridDemo() {
 					<VSCodeDataGridRow row-type="header">
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="1"
-						>
+							grid-column="1">
 							A Custom Header Title
 						</VSCodeDataGridCell>
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="2"
-						>
+							grid-column="2">
 							Another Custom Title
 						</VSCodeDataGridCell>
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="3"
-						>
+							grid-column="3">
 							Title Is Custom
 						</VSCodeDataGridCell>
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="4"
-						>
+							grid-column="4">
 							Custom Title
 						</VSCodeDataGridCell>
 					</VSCodeDataGridRow>
@@ -129,26 +121,22 @@ export function DataGridDemo() {
 					<VSCodeDataGridRow row-type="sticky-header">
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="1"
-						>
+							grid-column="1">
 							A Custom Header Title
 						</VSCodeDataGridCell>
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="2"
-						>
+							grid-column="2">
 							Another Custom Title
 						</VSCodeDataGridCell>
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="3"
-						>
+							grid-column="3">
 							Title Is Custom
 						</VSCodeDataGridCell>
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="4"
-						>
+							grid-column="4">
 							Custom Title
 						</VSCodeDataGridCell>
 					</VSCodeDataGridRow>
@@ -174,31 +162,26 @@ export function DataGridDemo() {
 				<p>With Custom Column Widths</p>
 				<VSCodeDataGrid
 					grid-template-columns="100px 10vw 3fr 30%"
-					aria-label="With Custom Column Widths"
-				>
+					aria-label="With Custom Column Widths">
 					<VSCodeDataGridRow row-type="header">
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="1"
-						>
+							grid-column="1">
 							A Custom Header Title
 						</VSCodeDataGridCell>
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="2"
-						>
+							grid-column="2">
 							Another Custom Title
 						</VSCodeDataGridCell>
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="3"
-						>
+							grid-column="3">
 							Title Is Custom
 						</VSCodeDataGridCell>
 						<VSCodeDataGridCell
 							cell-type="columnheader"
-							grid-column="4"
-						>
+							grid-column="4">
 							Custom Title
 						</VSCodeDataGridCell>
 					</VSCodeDataGridRow>

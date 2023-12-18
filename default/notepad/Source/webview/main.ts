@@ -17,7 +17,7 @@ provideVSCodeDesignSystem().register(
 	vsCodeButton(),
 	vsCodeTag(),
 	vsCodeTextArea(),
-	vsCodeTextField(),
+	vsCodeTextField()
 );
 
 // Get access to the VS Code API from within the webview context

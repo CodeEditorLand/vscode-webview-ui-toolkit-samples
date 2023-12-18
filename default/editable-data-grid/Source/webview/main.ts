@@ -10,7 +10,7 @@ import {
 provideVSCodeDesignSystem().register(
 	vsCodeDataGrid(),
 	vsCodeDataGridCell(),
-	vsCodeDataGridRow(),
+	vsCodeDataGridRow()
 );
 
 window.addEventListener("load", main);

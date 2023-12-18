@@ -39,7 +39,7 @@ export class EditableDataGridPanel {
 		// Set the HTML content for the webview panel
 		this._panel.webview.html = this._getWebviewContent(
 			this._panel.webview,
-			extensionUri,
+			extensionUri
 		);
 	}
 
@@ -68,12 +68,12 @@ export class EditableDataGridPanel {
 					enableScripts: true,
 					// Restrict the webview to only load resources from the `out` directory
 					localResourceRoots: [Uri.joinPath(extensionUri, "out")],
-				},
+				}
 			);
 
 			EditableDataGridPanel.currentPanel = new EditableDataGridPanel(
 				panel,
-				extensionUri,
+				extensionUri
 			);
 		}
 	}

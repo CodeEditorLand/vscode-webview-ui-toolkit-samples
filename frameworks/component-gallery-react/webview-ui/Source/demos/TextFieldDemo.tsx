@@ -38,8 +38,7 @@ export function TextFieldDemo() {
 					Label
 					<span
 						slot="start"
-						className="codicon codicon-search"
-					></span>
+						className="codicon codicon-search"></span>
 				</VSCodeTextField>
 			</section>
 			<section className="component-example">
@@ -48,8 +47,7 @@ export function TextFieldDemo() {
 					Label
 					<span
 						slot="end"
-						className="codicon codicon-text-size"
-					></span>
+						className="codicon codicon-text-size"></span>
 				</VSCodeTextField>
 			</section>
 		</section>

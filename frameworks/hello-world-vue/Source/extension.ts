@@ -7,7 +7,7 @@ export function activate(context: ExtensionContext) {
 		"hello-world.showHelloWorld",
 		() => {
 			HelloWorldPanel.render(context.extensionUri);
-		},
+		}
 	);
 
 	// Add command to the extension context

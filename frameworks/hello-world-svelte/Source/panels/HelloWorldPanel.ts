@@ -40,7 +40,7 @@ export class HelloWorldPanel {
 		// Set the HTML content for the webview panel
 		this._panel.webview.html = this._getWebviewContent(
 			this._panel.webview,
-			extensionUri,
+			extensionUri
 		);
 
 		// Set an event listener to listen for messages passed from the webview context
@@ -75,12 +75,12 @@ export class HelloWorldPanel {
 						Uri.joinPath(extensionUri, "out"),
 						Uri.joinPath(extensionUri, "webview-ui/public/build"),
 					],
-				},
+				}
 			);
 
 			HelloWorldPanel.currentPanel = new HelloWorldPanel(
 				panel,
-				extensionUri,
+				extensionUri
 			);
 		}
 	}
@@ -173,7 +173,7 @@ export class HelloWorldPanel {
 				}
 			},
 			undefined,
-			this._disposables,
+			this._disposables
 		);
 	}
 }

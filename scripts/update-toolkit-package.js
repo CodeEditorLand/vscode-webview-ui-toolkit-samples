@@ -28,8 +28,8 @@ async function main() {
 	console.log(
 		color(
 			["bold", "green"],
-			"All extension samples updated to the latest version of the toolkit!",
-		),
+			"All extension samples updated to the latest version of the toolkit!"
+		)
 	);
 }
 
@@ -43,13 +43,10 @@ async function installLatestToolkitPackage(rootDir, installDir = "") {
 					: `${rootDir}/${dir}`;
 			console.log(color(["dim"], `⏳ Updating toolkit in ${dir}...`));
 			await execShellCommand(
-				`cd ${dirPath} && npm i @vscode/webview-ui-toolkit@latest`,
+				`cd ${dirPath} && npm i @vscode/webview-ui-toolkit@latest`
 			);
 			console.log(
-				color(
-					["dim"],
-					`✅ Latest toolkit package installed in ${dir}!`,
-				),
+				color(["dim"], `✅ Latest toolkit package installed in ${dir}!`)
 			);
 			console.log();
 		}
@@ -57,8 +54,8 @@ async function installLatestToolkitPackage(rootDir, installDir = "") {
 		console.log(
 			`${color(
 				["red"],
-				"Error: Could not update toolkit package to latest version",
-			)}\n    ${err}`,
+				"Error: Could not update toolkit package to latest version"
+			)}\n    ${err}`
 		);
 		process.exit();
 	}

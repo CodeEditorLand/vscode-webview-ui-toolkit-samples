@@ -7,7 +7,7 @@ export function activate(context: ExtensionContext) {
 		"component-gallery-react.showGallery",
 		() => {
 			ComponentGalleryPanel.render(context.extensionUri);
-		},
+		}
 	);
 
 	// Add command to the extension context
