@@ -1,7 +1,7 @@
-import { Webview, Uri } from "vscode";
+import { Uri, Webview } from "vscode";
 import { Note } from "../types/Note";
-import { getUri } from "../utilities/getUri";
 import { getNonce } from "../utilities/getNonce";
+import { getUri } from "../utilities/getUri";
 
 /**
  * Defines and returns the HTML that should be rendered within a notepad note view (aka webview panel).
@@ -15,7 +15,7 @@ import { getNonce } from "../utilities/getNonce";
 export function getWebviewContent(
 	webview: Webview,
 	extensionUri: Uri,
-	note: Note
+	note: Note,
 ) {
 	const webviewUri = getUri(webview, extensionUri, ["out", "webview.js"]);
 	const styleUri = getUri(webview, extensionUri, ["out", "style.css"]);

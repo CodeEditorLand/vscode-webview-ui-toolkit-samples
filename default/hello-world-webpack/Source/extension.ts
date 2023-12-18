@@ -1,4 +1,4 @@
-import { commands, ExtensionContext } from "vscode";
+import { ExtensionContext, commands } from "vscode";
 import { HelloWorldPanel } from "./panels/HelloWorldPanel";
 
 export function activate(context: ExtensionContext) {
@@ -7,7 +7,7 @@ export function activate(context: ExtensionContext) {
 		"hello-world.showHelloWorld",
 		() => {
 			HelloWorldPanel.render(context.extensionUri);
-		}
+		},
 	);
 
 	// Add command to the extension context

@@ -1,7 +1,7 @@
 import {
+	Button,
 	provideVSCodeDesignSystem,
 	vsCodeButton,
-	Button,
 } from "@vscode/webview-ui-toolkit";
 
 // In order to use the Webview UI Toolkit web components they

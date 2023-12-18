@@ -14,7 +14,7 @@ export function ButtonDemo() {
 			</section>
 			<section className="component-example">
 				<p>With Disabled</p>
-				<VSCodeButton disabled>Button Text</VSCodeButton>
+				<VSCodeButton disabled={true}>Button Text</VSCodeButton>
 			</section>
 			<section className="component-example">
 				<p>With Start Icon</p>

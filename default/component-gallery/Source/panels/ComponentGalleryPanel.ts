@@ -1,13 +1,13 @@
 import {
 	Disposable,
+	Uri,
+	ViewColumn,
 	Webview,
 	WebviewPanel,
 	window,
-	Uri,
-	ViewColumn,
 } from "vscode";
-import { getUri } from "../utilities/getUri";
 import { getNonce } from "../utilities/getNonce";
+import { getUri } from "../utilities/getUri";
 import { badgeDemo } from "./demos/badge";
 import { buttonDemo } from "./demos/button";
 import { checkboxDemo } from "./demos/checkbox";
@@ -52,7 +52,7 @@ export class ComponentGalleryPanel {
 		// Set the HTML content for the webview panel
 		this._panel.webview.html = this._getWebviewContent(
 			this._panel.webview,
-			extensionUri
+			extensionUri,
 		);
 	}
 
@@ -81,12 +81,12 @@ export class ComponentGalleryPanel {
 					enableScripts: true,
 					// Restrict the webview to only load resources from the `out` directory
 					localResourceRoots: [Uri.joinPath(extensionUri, "out")],
-				}
+				},
 			);
 
 			ComponentGalleryPanel.currentPanel = new ComponentGalleryPanel(
 				panel,
-				extensionUri
+				extensionUri,
 			);
 		}
 	}

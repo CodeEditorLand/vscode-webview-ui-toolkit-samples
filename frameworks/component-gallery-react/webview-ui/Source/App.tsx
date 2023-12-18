@@ -1,3 +1,5 @@
+import "./App.css";
+import "./codicon.css";
 import { BadgeDemo } from "./demos/BadgeDemo";
 import { ButtonDemo } from "./demos/ButtonDemo";
 import { CheckboxDemo } from "./demos/CheckboxDemo";
@@ -11,8 +13,6 @@ import { RadioGroupDemo } from "./demos/RadioGroupDemo";
 import { TagDemo } from "./demos/TagDemo";
 import { TextAreaDemo } from "./demos/TextAreaDemo";
 import { TextFieldDemo } from "./demos/TextFieldDemo";
-import "./App.css";
-import "./codicon.css";
 
 function App() {
 	return (

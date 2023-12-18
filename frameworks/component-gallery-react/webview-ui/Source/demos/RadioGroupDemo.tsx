@@ -22,7 +22,7 @@ export function RadioGroupDemo() {
 			</section>
 			<section className="component-example">
 				<p>With Disabled</p>
-				<VSCodeRadioGroup disabled>
+				<VSCodeRadioGroup disabled={true}>
 					<label slot="label">Group Label</label>
 					<VSCodeRadio value="value-1">Radio Label</VSCodeRadio>
 					<VSCodeRadio value="value-2">Radio Label</VSCodeRadio>
@@ -31,7 +31,7 @@ export function RadioGroupDemo() {
 			</section>
 			<section className="component-example">
 				<p>With Readonly</p>
-				<VSCodeRadioGroup readOnly>
+				<VSCodeRadioGroup readOnly={true}>
 					<label slot="label">Group Label</label>
 					<VSCodeRadio value="value-1">Radio Label</VSCodeRadio>
 					<VSCodeRadio value="value-2">Radio Label</VSCodeRadio>

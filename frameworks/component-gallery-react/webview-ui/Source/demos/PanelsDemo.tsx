@@ -1,8 +1,8 @@
 import {
 	VSCodeBadge,
-	VSCodePanels,
 	VSCodePanelTab,
 	VSCodePanelView,
+	VSCodePanels,
 } from "@vscode/webview-ui-toolkit/react";
 
 export function PanelsDemo() {

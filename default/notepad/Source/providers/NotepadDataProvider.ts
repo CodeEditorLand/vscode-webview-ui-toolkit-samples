@@ -29,14 +29,14 @@ export class NotepadDataProvider implements TreeDataProvider<NotepadNote> {
 
 	constructor(notesData: Note[]) {
 		this.data = notesData.map(
-			(note) => new NotepadNote(note.id, note.title)
+			(note) => new NotepadNote(note.id, note.title),
 		);
 	}
 
 	refresh(notesData: Note[]): void {
 		this._onDidChangeTreeData.fire();
 		this.data = notesData.map(
-			(note) => new NotepadNote(note.id, note.title)
+			(note) => new NotepadNote(note.id, note.title),
 		);
 	}
 
@@ -45,7 +45,7 @@ export class NotepadDataProvider implements TreeDataProvider<NotepadNote> {
 	}
 
 	getChildren(
-		element?: NotepadNote | undefined
+		element?: NotepadNote | undefined,
 	): ProviderResult<NotepadNote[]> {
 		if (element === undefined) {
 			return this.data;

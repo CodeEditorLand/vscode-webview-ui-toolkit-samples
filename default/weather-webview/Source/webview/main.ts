@@ -1,14 +1,14 @@
 import {
-	provideVSCodeDesignSystem,
 	Button,
 	Dropdown,
 	ProgressRing,
 	TextField,
+	provideVSCodeDesignSystem,
 	vsCodeButton,
 	vsCodeDropdown,
 	vsCodeOption,
-	vsCodeTextField,
 	vsCodeProgressRing,
+	vsCodeTextField,
 } from "@vscode/webview-ui-toolkit";
 
 // In order to use the Webview UI Toolkit web components they
@@ -19,7 +19,7 @@ provideVSCodeDesignSystem().register(
 	vsCodeDropdown(),
 	vsCodeOption(),
 	vsCodeProgressRing(),
-	vsCodeTextField()
+	vsCodeTextField(),
 );
 
 // Get access to the VS Code API from within the webview context
@@ -36,7 +36,7 @@ function main() {
 	// a given toolkit component can be imported and used to type cast a reference
 	// to the element (i.e. the `as Button` syntax)
 	const checkWeatherButton = document.getElementById(
-		"check-weather-button"
+		"check-weather-button",
 	) as Button;
 	checkWeatherButton.addEventListener("click", checkWeather);
 

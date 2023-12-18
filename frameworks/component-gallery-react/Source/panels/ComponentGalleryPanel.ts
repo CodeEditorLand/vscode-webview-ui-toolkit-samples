@@ -1,13 +1,13 @@
 import {
 	Disposable,
+	Uri,
+	ViewColumn,
 	Webview,
 	WebviewPanel,
 	window,
-	Uri,
-	ViewColumn,
 } from "vscode";
-import { getUri } from "../utilities/getUri";
 import { getNonce } from "../utilities/getNonce";
+import { getUri } from "../utilities/getUri";
 
 /**
  * This class manages the state and behavior of ComponentGallery webview panels.
@@ -39,7 +39,7 @@ export class ComponentGalleryPanel {
 		// Set the HTML content for the webview panel
 		this._panel.webview.html = this._getWebviewContent(
 			this._panel.webview,
-			extensionUri
+			extensionUri,
 		);
 	}
 
@@ -71,12 +71,12 @@ export class ComponentGalleryPanel {
 						Uri.joinPath(extensionUri, "out"),
 						Uri.joinPath(extensionUri, "webview-ui/build"),
 					],
-				}
+				},
 			);
 
 			ComponentGalleryPanel.currentPanel = new ComponentGalleryPanel(
 				panel,
-				extensionUri
+				extensionUri,
 			);
 		}
 	}

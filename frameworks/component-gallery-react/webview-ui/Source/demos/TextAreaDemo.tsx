@@ -10,7 +10,7 @@ export function TextAreaDemo() {
 			</section>
 			<section className="component-example">
 				<p>With Disabled</p>
-				<VSCodeTextArea disabled>Text Area Label</VSCodeTextArea>
+				<VSCodeTextArea disabled={true}>Text Area Label</VSCodeTextArea>
 			</section>
 			<section className="component-example">
 				<p>With Placeholder</p>
@@ -20,7 +20,7 @@ export function TextAreaDemo() {
 			</section>
 			<section className="component-example">
 				<p>With Readonly</p>
-				<VSCodeTextArea readOnly>Text Area Label</VSCodeTextArea>
+				<VSCodeTextArea readOnly={true}>Text Area Label</VSCodeTextArea>
 			</section>
 			<section className="component-example">
 				<p>With Cols</p>

@@ -6,9 +6,9 @@ import {
 	WebviewViewProvider,
 	WebviewViewResolveContext,
 } from "vscode";
-import { getUri } from "../utilities/getUri";
-import { getNonce } from "../utilities/getNonce";
 import * as weather from "weather-js";
+import { getNonce } from "../utilities/getNonce";
+import { getUri } from "../utilities/getUri";
 
 export class WeatherViewProvider implements WebviewViewProvider {
 	public static readonly viewType = "weather.weatherView";
@@ -18,7 +18,7 @@ export class WeatherViewProvider implements WebviewViewProvider {
 	public resolveWebviewView(
 		webviewView: WebviewView,
 		context: WebviewViewResolveContext,
-		_token: CancellationToken
+		_token: CancellationToken,
 	) {
 		// Allow scripts in the webview
 		webviewView.webview.options = {
@@ -31,7 +31,7 @@ export class WeatherViewProvider implements WebviewViewProvider {
 		// Set the HTML content that will fill the webview view
 		webviewView.webview.html = this._getWebviewContent(
 			webviewView.webview,
-			this._extensionUri
+			this._extensionUri,
 		);
 
 		// Sets up an event listener to listen for messages passed from the webview view context
@@ -107,7 +107,7 @@ export class WeatherViewProvider implements WebviewViewProvider {
 								command: "weather",
 								payload: JSON.stringify(weatherForecast),
 							});
-						}
+						},
 					);
 					break;
 			}

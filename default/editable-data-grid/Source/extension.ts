@@ -1,4 +1,4 @@
-import { commands, ExtensionContext } from "vscode";
+import { ExtensionContext, commands } from "vscode";
 import { EditableDataGridPanel } from "./panels/EditableDataGridPanel";
 
 export function activate(context: ExtensionContext) {
@@ -7,7 +7,7 @@ export function activate(context: ExtensionContext) {
 		"editable-data-grid.showEditableDataGrid",
 		() => {
 			EditableDataGridPanel.render(context.extensionUri);
-		}
+		},
 	);
 
 	// Add command to the extension context

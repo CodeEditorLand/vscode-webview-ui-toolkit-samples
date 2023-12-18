@@ -10,7 +10,9 @@ export function TextFieldDemo() {
 			</section>
 			<section className="component-example">
 				<p>With Disabled</p>
-				<VSCodeTextField disabled>Text Field Label</VSCodeTextField>
+				<VSCodeTextField disabled={true}>
+					Text Field Label
+				</VSCodeTextField>
 			</section>
 			<section className="component-example">
 				<p>With Placeholder</p>
@@ -20,7 +22,9 @@ export function TextFieldDemo() {
 			</section>
 			<section className="component-example">
 				<p>With Readonly</p>
-				<VSCodeTextField readOnly>Text Area Label</VSCodeTextField>
+				<VSCodeTextField readOnly={true}>
+					Text Area Label
+				</VSCodeTextField>
 			</section>
 			<section className="component-example">
 				<p>With Size</p>
@@ -38,7 +42,8 @@ export function TextFieldDemo() {
 					Label
 					<span
 						slot="start"
-						className="codicon codicon-search"></span>
+						className="codicon codicon-search"
+					></span>
 				</VSCodeTextField>
 			</section>
 			<section className="component-example">
@@ -47,7 +52,8 @@ export function TextFieldDemo() {
 					Label
 					<span
 						slot="end"
-						className="codicon codicon-text-size"></span>
+						className="codicon codicon-text-size"
+					></span>
 				</VSCodeTextField>
 			</section>
 		</section>

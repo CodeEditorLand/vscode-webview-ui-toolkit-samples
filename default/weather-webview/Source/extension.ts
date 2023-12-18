@@ -14,7 +14,7 @@ export function activate(context: ExtensionContext) {
 	// Register the provider for a Webview View
 	const weatherViewDisposable = window.registerWebviewViewProvider(
 		WeatherViewProvider.viewType,
-		provider
+		provider,
 	);
 
 	context.subscriptions.push(weatherViewDisposable);

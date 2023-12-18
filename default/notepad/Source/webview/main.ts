@@ -1,9 +1,9 @@
 import {
-	provideVSCodeDesignSystem,
 	Button,
 	Tag,
 	TextArea,
 	TextField,
+	provideVSCodeDesignSystem,
 	vsCodeButton,
 	vsCodeTag,
 	vsCodeTextArea,
@@ -17,7 +17,7 @@ provideVSCodeDesignSystem().register(
 	vsCodeButton(),
 	vsCodeTag(),
 	vsCodeTextArea(),
-	vsCodeTextField()
+	vsCodeTextField(),
 );
 
 // Get access to the VS Code API from within the webview context

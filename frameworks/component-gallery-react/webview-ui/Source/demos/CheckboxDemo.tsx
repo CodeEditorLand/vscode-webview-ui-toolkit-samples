@@ -10,7 +10,7 @@ export function CheckboxDemo() {
 			</section>
 			<section className="component-example">
 				<p>With Checked</p>
-				<VSCodeCheckbox checked>Label</VSCodeCheckbox>
+				<VSCodeCheckbox checked={true}>Label</VSCodeCheckbox>
 			</section>
 			<section className="component-example">
 				<p>With Indeterminate</p>
@@ -18,11 +18,11 @@ export function CheckboxDemo() {
 			</section>
 			<section className="component-example">
 				<p>With Disabled</p>
-				<VSCodeCheckbox disabled>Label</VSCodeCheckbox>
+				<VSCodeCheckbox disabled={true}>Label</VSCodeCheckbox>
 			</section>
 			<section className="component-example">
 				<p>With Readonly</p>
-				<VSCodeCheckbox readOnly>Label</VSCodeCheckbox>
+				<VSCodeCheckbox readOnly={true}>Label</VSCodeCheckbox>
 			</section>
 		</section>
 	);

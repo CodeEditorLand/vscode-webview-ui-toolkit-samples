@@ -1,13 +1,13 @@
 import {
 	Disposable,
+	Uri,
+	ViewColumn,
 	Webview,
 	WebviewPanel,
 	window,
-	Uri,
-	ViewColumn,
 } from "vscode";
-import { getUri } from "../utilities/getUri";
 import { getNonce } from "../utilities/getNonce";
+import { getUri } from "../utilities/getUri";
 
 /**
  * This class manages the state and behavior of HelloWorld webview panels.
@@ -40,7 +40,7 @@ export class HelloWorldPanel {
 		// Set the HTML content for the webview panel
 		this._panel.webview.html = this._getWebviewContent(
 			this._panel.webview,
-			extensionUri
+			extensionUri,
 		);
 
 		// Set an event listener to listen for messages passed from the webview context
@@ -72,12 +72,12 @@ export class HelloWorldPanel {
 					enableScripts: true,
 					// Restrict the webview to only load resources from the `out` directory
 					localResourceRoots: [Uri.joinPath(extensionUri, "out")],
-				}
+				},
 			);
 
 			HelloWorldPanel.currentPanel = new HelloWorldPanel(
 				panel,
-				extensionUri
+				extensionUri,
 			);
 		}
 	}
@@ -156,7 +156,7 @@ export class HelloWorldPanel {
 				}
 			},
 			undefined,
-			this._disposables
+			this._disposables,
 		);
 	}
 }

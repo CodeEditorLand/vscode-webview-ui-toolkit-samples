@@ -1,16 +1,16 @@
 import {
+	DataGrid,
+	DataGridCell,
 	provideVSCodeDesignSystem,
 	vsCodeDataGrid,
 	vsCodeDataGridCell,
 	vsCodeDataGridRow,
-	DataGrid,
-	DataGridCell,
 } from "@vscode/webview-ui-toolkit";
 
 provideVSCodeDesignSystem().register(
 	vsCodeDataGrid(),
 	vsCodeDataGridCell(),
-	vsCodeDataGridRow()
+	vsCodeDataGridRow(),
 );
 
 window.addEventListener("load", main);
@@ -148,12 +148,10 @@ function handleKeydown(e: KeyboardEvent, cell: DataGridCell) {
 			e.preventDefault();
 			setCellEditable(cell);
 		}
-	} else {
-		if (e.key === "Enter" || e.key === "Escape") {
-			e.preventDefault();
-			syncCellChanges(cell);
-			unsetCellEditable(cell);
-		}
+	} else if (e.key === "Enter" || e.key === "Escape") {
+		e.preventDefault();
+		syncCellChanges(cell);
+		unsetCellEditable(cell);
 	}
 }
 

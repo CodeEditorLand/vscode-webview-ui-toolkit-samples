@@ -1,8 +1,8 @@
 import {
-	allComponents,
-	provideVSCodeDesignSystem,
 	Checkbox,
 	DataGrid,
+	allComponents,
+	provideVSCodeDesignSystem,
 } from "@vscode/webview-ui-toolkit";
 
 // In order to use all the Webview UI Toolkit web components they
@@ -45,7 +45,7 @@ function main() {
 
 	// Define data grid with custom titles
 	const basicDataGridList = document.querySelectorAll(
-		".basic-grid"
+		".basic-grid",
 	) as NodeListOf<DataGrid>;
 	for (const basicDataGrid of basicDataGridList) {
 		basicDataGrid.rowsData = [
