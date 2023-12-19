@@ -40,20 +40,14 @@ export function TextFieldDemo() {
 				<p>With Start Icon</p>
 				<VSCodeTextField>
 					Label
-					<span
-						slot="start"
-						className="codicon codicon-search"
-					></span>
+					<span slot="start" className="codicon codicon-search" />
 				</VSCodeTextField>
 			</section>
 			<section className="component-example">
 				<p>With End Icon</p>
 				<VSCodeTextField>
 					Label
-					<span
-						slot="end"
-						className="codicon codicon-text-size"
-					></span>
+					<span slot="end" className="codicon codicon-text-size" />
 				</VSCodeTextField>
 			</section>
 		</section>

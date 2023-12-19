@@ -19,29 +19,29 @@ function App() {
 		<main>
 			<h1>Webview UI Toolkit React Component Gallery</h1>
 			<section className="component-row">
-				<BadgeDemo></BadgeDemo>
-				<ButtonDemo></ButtonDemo>
-				<CheckboxDemo></CheckboxDemo>
+				<BadgeDemo />
+				<ButtonDemo />
+				<CheckboxDemo />
 			</section>
 			<section id="data-grid-row">
-				<DataGridDemo></DataGridDemo>
+				<DataGridDemo />
 			</section>
 			<section className="component-row">
-				<DividerDemo></DividerDemo>
-				<DropdownDemo></DropdownDemo>
-				<LinkDemo></LinkDemo>
+				<DividerDemo />
+				<DropdownDemo />
+				<LinkDemo />
 			</section>
 			<section id="panels-row">
-				<PanelsDemo></PanelsDemo>
+				<PanelsDemo />
 			</section>
 			<section className="component-row">
-				<ProgressRingDemo></ProgressRingDemo>
-				<RadioGroupDemo></RadioGroupDemo>
-				<TagDemo></TagDemo>
+				<ProgressRingDemo />
+				<RadioGroupDemo />
+				<TagDemo />
 			</section>
 			<section className="component-row">
-				<TextAreaDemo></TextAreaDemo>
-				<TextFieldDemo></TextFieldDemo>
+				<TextAreaDemo />
+				<TextFieldDemo />
 			</section>
 		</main>
 	);

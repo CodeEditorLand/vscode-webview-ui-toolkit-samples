@@ -88,7 +88,7 @@ export class WeatherViewProvider implements WebviewViewProvider {
 			const unit = message.unit;
 
 			switch (command) {
-				case "weather":
+				case "weather": {
 					weather.find(
 						{ search: location, degreeType: unit },
 						(err: any, result: any) => {
@@ -110,6 +110,7 @@ export class WeatherViewProvider implements WebviewViewProvider {
 						},
 					);
 					break;
+				}
 			}
 		});
 	}

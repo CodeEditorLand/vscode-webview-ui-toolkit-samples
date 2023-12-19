@@ -6,7 +6,7 @@ export function ProgressRingDemo() {
 			<h2>Progress Ring</h2>
 			<section className="component-example">
 				<p>Default Progress Ring</p>
-				<VSCodeProgressRing></VSCodeProgressRing>
+				<VSCodeProgressRing />
 			</section>
 		</section>
 	);

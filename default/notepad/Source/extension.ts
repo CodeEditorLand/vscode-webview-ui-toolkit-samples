@@ -66,7 +66,7 @@ export function activate(context: ExtensionContext) {
 				const command = message.command;
 				const note = message.note;
 				switch (command) {
-					case "updateNote":
+					case "updateNote": {
 						const updatedNoteId = note.id;
 						const copyOfNotesArray = [...notes];
 						const matchingNoteIndex = copyOfNotesArray.findIndex(
@@ -84,6 +84,7 @@ export function activate(context: ExtensionContext) {
 							  )))
 							: null;
 						break;
+					}
 				}
 			});
 

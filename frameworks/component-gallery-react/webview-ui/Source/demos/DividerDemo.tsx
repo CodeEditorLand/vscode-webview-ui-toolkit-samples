@@ -6,11 +6,11 @@ export function DividerDemo() {
 			<h2>Divider</h2>
 			<section className="component-example">
 				<p>With Separator Role</p>
-				<VSCodeDivider role="separator"></VSCodeDivider>
+				<VSCodeDivider role="separator" />
 			</section>
 			<section className="component-example">
 				<p>With Presentation Role</p>
-				<VSCodeDivider role="presentation"></VSCodeDivider>
+				<VSCodeDivider role="presentation" />
 			</section>
 		</section>
 	);

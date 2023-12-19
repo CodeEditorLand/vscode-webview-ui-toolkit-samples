@@ -26,12 +26,13 @@ export function getWebviewContent(
 	webview.onDidReceiveMessage((message) => {
 		const command = message.command;
 		switch (command) {
-			case "requestNoteData":
+			case "requestNoteData": {
 				webview.postMessage({
 					command: "receiveDataInWebview",
 					payload: JSON.stringify(note),
 				});
 				break;
+			}
 		}
 	});
 

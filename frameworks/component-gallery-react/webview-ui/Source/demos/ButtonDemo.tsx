@@ -20,13 +20,13 @@ export function ButtonDemo() {
 				<p>With Start Icon</p>
 				<VSCodeButton>
 					Button Text
-					<span slot="start" className="codicon codicon-add"></span>
+					<span slot="start" className="codicon codicon-add" />
 				</VSCodeButton>
 			</section>
 			<section className="component-example">
 				<p>With Icon Only</p>
 				<VSCodeButton appearance="icon" aria-label="Confirm">
-					<span className="codicon codicon-check"></span>
+					<span className="codicon codicon-check" />
 				</VSCodeButton>
 			</section>
 		</section>

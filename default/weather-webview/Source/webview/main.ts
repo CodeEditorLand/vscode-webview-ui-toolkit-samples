@@ -65,13 +65,15 @@ function setVSCodeMessageListener() {
 		const command = event.data.command;
 
 		switch (command) {
-			case "weather":
+			case "weather": {
 				const weatherData = JSON.parse(event.data.payload);
 				displayWeatherData(weatherData);
 				break;
-			case "error":
+			}
+			case "error": {
 				displayError(event.data.message);
 				break;
+			}
 		}
 	});
 }
@@ -123,30 +125,38 @@ function getWeatherIcon(weatherData) {
 	let icon = "";
 
 	switch (skyText) {
-		case "sunny":
+		case "sunny": {
 			icon = "☀️";
 			break;
-		case "mostly sunny":
+		}
+		case "mostly sunny": {
 			icon = "🌤";
 			break;
-		case "partly sunny":
+		}
+		case "partly sunny": {
 			icon = "🌥";
 			break;
-		case "clear":
+		}
+		case "clear": {
 			icon = "☀️";
 			break;
-		case "fair":
+		}
+		case "fair": {
 			icon = "🌥";
 			break;
-		case "mostly cloudy":
+		}
+		case "mostly cloudy": {
 			icon = "☁️";
 			break;
-		case "cloudy":
+		}
+		case "cloudy": {
 			icon = "☁️";
 			break;
-		case "rain showers":
+		}
+		case "rain showers": {
 			icon = "🌦";
 			break;
+		}
 		default:
 			icon = "✨";
 	}

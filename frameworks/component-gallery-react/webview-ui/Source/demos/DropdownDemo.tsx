@@ -26,7 +26,7 @@ export function DropdownDemo() {
 					<span
 						slot="indicator"
 						className="codicon codicon-settings"
-					></span>
+					/>
 					<VSCodeOption>Option Label #1</VSCodeOption>
 					<VSCodeOption>Option Label #2</VSCodeOption>
 					<VSCodeOption>Option Label #3</VSCodeOption>

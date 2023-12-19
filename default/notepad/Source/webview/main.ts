@@ -48,10 +48,11 @@ function setVSCodeMessageListener() {
 		const noteData = JSON.parse(event.data.payload);
 
 		switch (command) {
-			case "receiveDataInWebview":
+			case "receiveDataInWebview": {
 				openedNote = noteData;
 				renderTags(openedNote.tags);
 				break;
+			}
 		}
 	});
 }
