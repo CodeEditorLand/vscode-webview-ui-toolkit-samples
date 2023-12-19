@@ -73,7 +73,7 @@ jobs:
                           --unsafe-perm=true
                         ]
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -82,7 +82,7 @@ jobs:
             - run: pnpm install
               working-directory: ./default/component-gallery
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -91,7 +91,7 @@ jobs:
             - run: pnpm install
               working-directory: ./default/editable-data-grid
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -100,7 +100,7 @@ jobs:
             - run: pnpm install
               working-directory: ./default/hello-world-webpack
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -109,7 +109,7 @@ jobs:
             - run: pnpm install
               working-directory: ./default/hello-world
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -118,7 +118,7 @@ jobs:
             - run: pnpm install
               working-directory: ./default/notepad
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -127,7 +127,7 @@ jobs:
             - run: pnpm install
               working-directory: ./default/weather-webview
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -136,7 +136,7 @@ jobs:
             - run: pnpm install
               working-directory: ./frameworks/component-gallery-react
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -153,7 +153,7 @@ jobs:
                   name: .-frameworks-component-gallery-react-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/component-gallery-react/webview-ui/Target
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -162,7 +162,7 @@ jobs:
             - run: pnpm install
               working-directory: ./frameworks/hello-world-angular
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -182,7 +182,7 @@ jobs:
             - run: pnpm run test
               working-directory: ./frameworks/hello-world-angular/webview-ui
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -191,7 +191,7 @@ jobs:
             - run: pnpm install
               working-directory: ./frameworks/hello-world-react-cra
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -211,7 +211,7 @@ jobs:
             - run: pnpm run test
               working-directory: ./frameworks/hello-world-react-cra/webview-ui
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -220,7 +220,7 @@ jobs:
             - run: pnpm install
               working-directory: ./frameworks/hello-world-react-vite
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -237,7 +237,7 @@ jobs:
                   name: .-frameworks-hello-world-react-vite-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-react-vite/webview-ui/Target
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -246,7 +246,7 @@ jobs:
             - run: pnpm install
               working-directory: ./frameworks/hello-world-solidjs
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -263,7 +263,7 @@ jobs:
                   name: .-frameworks-hello-world-solidjs-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-solidjs/webview-ui/Target
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -272,7 +272,7 @@ jobs:
             - run: pnpm install
               working-directory: ./frameworks/hello-world-svelte
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -289,7 +289,7 @@ jobs:
                   name: .-frameworks-hello-world-svelte-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-svelte/webview-ui/Target
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -298,7 +298,7 @@ jobs:
             - run: pnpm install
               working-directory: ./frameworks/hello-world-vue
 
-            - uses: actions/setup-node@v4.0.0
+            - uses: actions/setup-node@v4.0.1
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
