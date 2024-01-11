@@ -9,12 +9,12 @@
 	},
 	"dependencies": {
 		"@vscode/webview-ui-toolkit": "1.4.0",
-		"solid-js": "1.8.8"
+		"solid-js": "1.8.10"
 	},
 	"devDependencies": {
 		"@types/vscode-webview": "1.57.4",
 		"typescript": "5.3.3",
-		"vite": "5.0.10",
+		"vite": "5.0.11",
 		"vite-plugin-solid": "2.8.0"
 	}
 }

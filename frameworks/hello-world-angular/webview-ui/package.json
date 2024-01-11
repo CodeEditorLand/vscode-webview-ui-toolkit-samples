@@ -21,14 +21,14 @@
 		"@vscode/webview-ui-toolkit": "1.4.0",
 		"rxjs": "7.8.1",
 		"tslib": "2.6.2",
-		"zone.js": "0.14.2"
+		"zone.js": "0.14.3"
 	},
 	"devDependencies": {
-		"@angular-devkit/build-angular": "17.0.9",
-		"@angular/cli": "17.0.9",
+		"@angular-devkit/build-angular": "17.0.10",
+		"@angular/cli": "17.0.10",
 		"@angular/compiler-cli": "17.0.8",
 		"@types/jasmine": "5.1.4",
-		"@types/node": "20.10.6",
+		"@types/node": "20.10.8",
 		"@types/vscode-webview": "1.57.4",
 		"jasmine-core": "5.1.1",
 		"karma": "6.4.2",
