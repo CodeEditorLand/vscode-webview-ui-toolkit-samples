@@ -9,7 +9,7 @@
 	},
 	"dependencies": {
 		"@vscode/webview-ui-toolkit": "1.4.0",
-		"solid-js": "1.8.10"
+		"solid-js": "1.8.11"
 	},
 	"devDependencies": {
 		"@types/vscode-webview": "1.57.4",
