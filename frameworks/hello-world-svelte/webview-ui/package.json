@@ -1,12 +1,29 @@
 {
   "name": "hello-world",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
+  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
+  "bugs": {
+    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "author": {
+    "name": "Nikola Hristov",
+    "email": "nikola@nikolahristov.tech",
+    "url": "https://nikolahristov.tech"
+  },
+  "publisher": "playform",
+  "type": "module",
   "scripts": {
     "build": "rollup -c",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+    "start": "sirv public --no-clear"
   },
   "dependencies": {
     "@vscode/webview-ui-toolkit": "^1.2.2",
@@ -27,6 +44,10 @@
     "svelte-check": "^2.0.0",
     "svelte-preprocess": "^4.0.0",
     "tslib": "^2.0.0",
-    "typescript": "^4.0.0"
+    "typescript": "^4.0.0",
+    "typescript-esbuild": "0.3.6"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
