@@ -73,7 +73,7 @@ jobs:
                           --unsafe-perm=true
                         ]
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -85,12 +85,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-default-component-gallery-Node-${{ matrix.node-version }}-Target
                   path: ./default/component-gallery/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -102,12 +102,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-default-editable-data-grid-Node-${{ matrix.node-version }}-Target
                   path: ./default/editable-data-grid/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -119,12 +119,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-default-hello-world-webpack-Node-${{ matrix.node-version }}-Target
                   path: ./default/hello-world-webpack/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -136,12 +136,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-default-hello-world-Node-${{ matrix.node-version }}-Target
                   path: ./default/hello-world/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -153,12 +153,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-default-notepad-Node-${{ matrix.node-version }}-Target
                   path: ./default/notepad/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -170,12 +170,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-default-weather-webview-Node-${{ matrix.node-version }}-Target
                   path: ./default/weather-webview/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -187,12 +187,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-component-gallery-react-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/component-gallery-react/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -204,7 +204,7 @@ jobs:
             - run: pnpm run build
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-component-gallery-react-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/component-gallery-react/webview-ui/Target
@@ -212,12 +212,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-component-gallery-react-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/component-gallery-react/webview-ui/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -229,12 +229,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-angular-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-angular/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -246,7 +246,7 @@ jobs:
             - run: pnpm run build
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-angular-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-angular/webview-ui/Target
@@ -254,12 +254,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-angular-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-angular/webview-ui/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -271,12 +271,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-react-cra-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-react-cra/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -288,7 +288,7 @@ jobs:
             - run: pnpm run build
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-react-cra-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-react-cra/webview-ui/Target
@@ -296,12 +296,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-react-cra-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-react-cra/webview-ui/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -313,12 +313,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-react-vite-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-react-vite/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -330,7 +330,7 @@ jobs:
             - run: pnpm run build
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-react-vite-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-react-vite/webview-ui/Target
@@ -338,12 +338,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-react-vite-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-react-vite/webview-ui/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -355,12 +355,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-solidjs-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-solidjs/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -372,7 +372,7 @@ jobs:
             - run: pnpm run build
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-solidjs-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-solidjs/webview-ui/Target
@@ -380,12 +380,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-solidjs-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-solidjs/webview-ui/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -397,12 +397,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-svelte-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-svelte/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -414,7 +414,7 @@ jobs:
             - run: pnpm run build
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-svelte-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-svelte/webview-ui/Target
@@ -422,12 +422,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-svelte-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-svelte/webview-ui/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -439,12 +439,12 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-vue-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-vue/Target
 
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -456,7 +456,7 @@ jobs:
             - run: pnpm run build
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-vue-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-vue/webview-ui/Target
@@ -464,7 +464,7 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .-frameworks-hello-world-vue-webview-ui-Node-${{ matrix.node-version }}-Target
                   path: ./frameworks/hello-world-vue/webview-ui/Target
