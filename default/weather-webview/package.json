@@ -51,7 +51,7 @@
 		"esbuild-plugin-copy": "^2.0.1",
 		"glob": "^8.0.3",
 		"typescript": "^4.8.4",
-		"typescript-esbuild": "latest"
+		"typescript-esbuild": "0.4.5"
 	},
 	"publishConfig": {
 		"access": "public"
