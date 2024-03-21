@@ -1,28 +1,4 @@
 {
-	"name": "hello-world",
-	"version": "0.0.1",
-	"private": false,
-	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
-	"bugs": {
-		"url": "https://github.com/CodeEditorLand/Foundation/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
-	},
-	"license": "SEE LICENSE IN LICENSE",
-	"author": {
-		"name": "Playform",
-		"email": "Hello@Playform.Cloud",
-		"url": "https://playform.cloud"
-	},
-	"type": "module",
-	"scripts": {
-		"build": "vue-tsc --noEmit && vite build",
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
-		"preview": "vite preview --port 5050",
-		"start": "vite"
-	},
 	"dependencies": {
 		"@vscode/webview-ui-toolkit": "^1.2.2",
 		"vue": "^3.2.33"
@@ -37,7 +13,12 @@
 		"vite": "^2.9.13",
 		"vue-tsc": "^0.34.7"
 	},
-	"publishConfig": {
-		"access": "public"
-	}
+	"name": "hello-world",
+	"scripts": {
+		"build": "vue-tsc --noEmit && vite build",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"preview": "vite preview --port 5050",
+		"start": "vite"
+	},
+	"type": "module"
 }

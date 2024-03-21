@@ -1,34 +1,4 @@
 {
-	"name": "hello-world-svelte",
-	"displayName": "hello-world-svelte",
-	"version": "0.0.1",
-	"private": false,
-	"description": "A hello world sample extension to demonstrate using Svelte with the Webview UI Toolkit for VS Code.",
-	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
-	"bugs": {
-		"url": "https://github.com/CodeEditorLand/Foundation/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
-	},
-	"license": "SEE LICENSE IN LICENSE",
-	"author": {
-		"name": "Playform",
-		"email": "Hello@Playform.Cloud",
-		"url": "https://playform.cloud"
-	},
-	"type": "module",
-	"main": "./out/extension.js",
-	"scripts": {
-		"build:webview": "cd webview-ui && npm run build",
-		"compile": "tsc -p ./",
-		"install:all": "npm install && cd webview-ui && npm install",
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
-		"start:webview": "cd webview-ui && npm run dev",
-		"vscode:prepublish": "npm run compile",
-		"watch": "tsc -watch -p ./"
-	},
 	"contributes": {
 		"commands": [
 			{
@@ -37,6 +7,7 @@
 			}
 		]
 	},
+	"description": "A hello world sample extension to demonstrate using Svelte with the Webview UI Toolkit for VS Code.",
 	"devDependencies": {
 		"@types/glob": "^7.1.3",
 		"@types/node": "^12.11.7",
@@ -46,7 +17,17 @@
 		"typescript-esbuild": "0.4.5",
 		"vscode-test": "^1.5.0"
 	},
-	"publishConfig": {
-		"access": "public"
-	}
+	"displayName": "hello-world-svelte",
+	"main": "./out/extension.js",
+	"name": "hello-world-svelte",
+	"scripts": {
+		"build:webview": "cd webview-ui && npm run build",
+		"compile": "tsc -p ./",
+		"install:all": "npm install && cd webview-ui && npm install",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"start:webview": "cd webview-ui && npm run dev",
+		"vscode:prepublish": "npm run compile",
+		"watch": "tsc -watch -p ./"
+	},
+	"type": "module"
 }
