@@ -1,4 +1,28 @@
 {
+	"name": "hello-world",
+	"version": "0.0.1",
+	"private": false,
+	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/Foundation/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Playform",
+		"email": "Hello@Playform.Cloud",
+		"url": "https://playform.cloud"
+	},
+	"type": "module",
+	"scripts": {
+		"build": "rollup -c",
+		"dev": "rollup -c -w",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"start": "sirv public --no-clear"
+	},
 	"dependencies": {
 		"@vscode/webview-ui-toolkit": "^1.2.2",
 		"sirv-cli": "^2.0.0"
@@ -21,12 +45,7 @@
 		"typescript": "^4.0.0",
 		"typescript-esbuild": "0.4.5"
 	},
-	"name": "hello-world",
-	"scripts": {
-		"build": "rollup -c",
-		"dev": "rollup -c -w",
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
-		"start": "sirv public --no-clear"
-	},
-	"type": "module"
+	"publishConfig": {
+		"access": "public"
+	}
 }

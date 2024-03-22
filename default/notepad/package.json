@@ -1,4 +1,32 @@
 {
+	"name": "notepad",
+	"displayName": "notepad",
+	"version": "0.0.1",
+	"private": false,
+	"description": "A sample extension that showcases the Webview UI Toolkit for VS Code alongside the VS Code TreeView and Webview API",
+	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/Foundation/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Playform",
+		"email": "Hello@Playform.Cloud",
+		"url": "https://playform.cloud"
+	},
+	"type": "module",
+	"main": "./out/extension.js",
+	"scripts": {
+		"compile": "node ./esbuild.js",
+		"package": "NODE_ENV=production node ./esbuild.js",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"vscode:prepublish": "npm run package",
+		"watch": "node ./esbuild.js --watch"
+	},
 	"contributes": {
 		"commands": [
 			{
@@ -56,7 +84,6 @@
 		"@vscode/webview-ui-toolkit": "^1.2.2",
 		"uuid": "^9.0.0"
 	},
-	"description": "A sample extension that showcases the Webview UI Toolkit for VS Code alongside the VS Code TreeView and Webview API",
 	"devDependencies": {
 		"@types/glob": "^8.0.0",
 		"@types/node": "16.x",
@@ -69,15 +96,7 @@
 		"typescript": "^4.8.4",
 		"typescript-esbuild": "0.4.5"
 	},
-	"displayName": "notepad",
-	"main": "./out/extension.js",
-	"name": "notepad",
-	"scripts": {
-		"compile": "node ./esbuild.js",
-		"package": "NODE_ENV=production node ./esbuild.js",
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
-		"vscode:prepublish": "npm run package",
-		"watch": "node ./esbuild.js --watch"
-	},
-	"type": "module"
+	"publishConfig": {
+		"access": "public"
+	}
 }

@@ -1,4 +1,29 @@
 {
+	"name": "hello-world",
+	"version": "0.0.1",
+	"private": false,
+	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/Foundation/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Playform",
+		"email": "Hello@Playform.Cloud",
+		"url": "https://playform.cloud"
+	},
+	"type": "module",
+	"scripts": {
+		"build": "ng build --output-hashing=none",
+		"ng": "ng",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"start": "ng serve",
+		"watch": "ng build --watch --configuration development"
+	},
 	"dependencies": {
 		"@angular/animations": "~13.3.0",
 		"@angular/common": "~13.3.0",
@@ -29,13 +54,7 @@
 		"typescript": "~4.6.2",
 		"typescript-esbuild": "0.4.5"
 	},
-	"name": "hello-world",
-	"scripts": {
-		"build": "ng build --output-hashing=none",
-		"ng": "ng",
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
-		"start": "ng serve",
-		"watch": "ng build --watch --configuration development"
-	},
-	"type": "module"
+	"publishConfig": {
+		"access": "public"
+	}
 }

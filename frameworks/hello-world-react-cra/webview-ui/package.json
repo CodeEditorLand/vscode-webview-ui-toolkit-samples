@@ -1,4 +1,28 @@
 {
+	"name": "hello-world",
+	"version": "0.0.1",
+	"private": false,
+	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/Foundation/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Playform",
+		"email": "Hello@Playform.Cloud",
+		"url": "https://playform.cloud"
+	},
+	"type": "module",
+	"scripts": {
+		"build": "node ./scripts/build-react-no-split.js",
+		"eject": "react-scripts eject",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"start": "EXTEND_ESLINT=true react-scripts start"
+	},
 	"browserslist": {
 		"development": [
 			"last 1 chrome version",
@@ -26,12 +50,7 @@
 		"typescript": "^4.4.4",
 		"typescript-esbuild": "0.4.5"
 	},
-	"name": "hello-world",
-	"scripts": {
-		"build": "node ./scripts/build-react-no-split.js",
-		"eject": "react-scripts eject",
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
-		"start": "EXTEND_ESLINT=true react-scripts start"
-	},
-	"type": "module"
+	"publishConfig": {
+		"access": "public"
+	}
 }
