@@ -1,31 +1,25 @@
 {
-	"author": {
-		"email": "Land@PlayForm.Cloud",
-		"name": "🌆 — Land —",
-		"url": "HTTPS://Land.PlayForm.Cloud"
-	},
-	"bugs": {
-		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples/issues"
-	},
-	"dependencies": {},
-	"devDependencies": {
-		"@playform/build": "0.0.7",
-		"@playform/document": "0.0.6"
-	},
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples#readme",
+	"name": "component-gallery",
+	"version": "0.0.1",
+	"private": false,
 	"keywords": [
 		"land"
 	],
-	"license": "SEE LICENSE IN LICENSE",
-	"name": "component-gallery",
-	"private": false,
-	"publishConfig": {
-		"access": "public"
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples/issues"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+HTTPS://github.com/CodeEditorLand/LandWebViewUIToolkitSamples.git"
 	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
 	"scripts": {
 		"Document": "Document 'Source/**/*.ts'",
 		"build": "tsc && vite build",
@@ -33,6 +27,12 @@
 		"preview": "vite preview",
 		"start": "vite"
 	},
-	"type": "module",
-	"version": "0.0.1"
+	"dependencies": {},
+	"devDependencies": {
+		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }

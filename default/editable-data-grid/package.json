@@ -1,11 +1,32 @@
 {
-	"author": {
-		"email": "Land@PlayForm.Cloud",
-		"name": "🌆 — Land —",
-		"url": "HTTPS://Land.PlayForm.Cloud"
-	},
+	"name": "editable-data-grid",
+	"displayName": "editable-data-grid",
+	"version": "0.0.1",
+	"private": false,
+	"description": "A sample extension that demonstrates a solution for making editable data grids.",
+	"keywords": [
+		"land"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples#readme",
 	"bugs": {
 		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandWebViewUIToolkitSamples.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
+	"main": "./out/extension.js",
+	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
+		"compile": "node ./esbuild.js",
+		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"contributes": {
 		"commands": [
@@ -16,7 +37,6 @@
 		]
 	},
 	"dependencies": {},
-	"description": "A sample extension that demonstrates a solution for making editable data grids.",
 	"devDependencies": {
 		"@playform/build": "0.0.7",
 		"@playform/document": "0.0.6",
@@ -25,27 +45,7 @@
 		"esbuild": "0.20.2",
 		"glob": "10.3.12"
 	},
-	"displayName": "editable-data-grid",
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples#readme",
-	"keywords": [
-		"land"
-	],
-	"license": "SEE LICENSE IN LICENSE",
-	"main": "./out/extension.js",
-	"name": "editable-data-grid",
-	"private": false,
 	"publishConfig": {
 		"access": "public"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+HTTPS://github.com/CodeEditorLand/LandWebViewUIToolkitSamples.git"
-	},
-	"scripts": {
-		"Document": "Document 'Source/**/*.ts'",
-		"compile": "node ./esbuild.js",
-		"prepublishOnly": "Build 'Source/**/*.ts'"
-	},
-	"type": "module",
-	"version": "0.0.1"
+	}
 }

@@ -1,11 +1,31 @@
 {
-	"author": {
-		"email": "Land@PlayForm.Cloud",
-		"name": "🌆 — Land —",
-		"url": "HTTPS://Land.PlayForm.Cloud"
-	},
+	"name": "hello-world",
+	"version": "0.0.1",
+	"private": false,
+	"keywords": [
+		"land"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples#readme",
 	"bugs": {
 		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandWebViewUIToolkitSamples.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
+	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
+		"build": "rollup -c",
+		"dev": "rollup -c -w",
+		"prepublishOnly": "Build 'Source/**/*.ts'",
+		"start": "sirv public --no-clear"
 	},
 	"dependencies": {
 		"sirv-cli": "2.0.2"
@@ -15,27 +35,7 @@
 		"@playform/document": "0.0.6",
 		"tslib": "2.6.2"
 	},
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples#readme",
-	"keywords": [
-		"land"
-	],
-	"license": "SEE LICENSE IN LICENSE",
-	"name": "hello-world",
-	"private": false,
 	"publishConfig": {
 		"access": "public"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+HTTPS://github.com/CodeEditorLand/LandWebViewUIToolkitSamples.git"
-	},
-	"scripts": {
-		"Document": "Document 'Source/**/*.ts'",
-		"build": "rollup -c",
-		"dev": "rollup -c -w",
-		"prepublishOnly": "Build 'Source/**/*.ts'",
-		"start": "sirv public --no-clear"
-	},
-	"type": "module",
-	"version": "0.0.1"
+	}
 }

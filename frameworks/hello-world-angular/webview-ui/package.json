@@ -1,11 +1,31 @@
 {
-	"author": {
-		"email": "Land@PlayForm.Cloud",
-		"name": "🌆 — Land —",
-		"url": "HTTPS://Land.PlayForm.Cloud"
-	},
+	"name": "hello-world",
+	"version": "0.0.1",
+	"private": false,
+	"keywords": [
+		"land"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples#readme",
 	"bugs": {
 		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandWebViewUIToolkitSamples.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
+	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
+		"build": "ng build --output-hashing=none",
+		"ng": "ng",
+		"prepublishOnly": "Build 'Source/**/*.ts'",
+		"start": "ng serve"
 	},
 	"dependencies": {
 		"@angular/animations": "17.3.6",
@@ -34,27 +54,7 @@
 		"karma-jasmine": "5.1.0",
 		"karma-jasmine-html-reporter": "2.1.0"
 	},
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples#readme",
-	"keywords": [
-		"land"
-	],
-	"license": "SEE LICENSE IN LICENSE",
-	"name": "hello-world",
-	"private": false,
 	"publishConfig": {
 		"access": "public"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+HTTPS://github.com/CodeEditorLand/LandWebViewUIToolkitSamples.git"
-	},
-	"scripts": {
-		"Document": "Document 'Source/**/*.ts'",
-		"build": "ng build --output-hashing=none",
-		"ng": "ng",
-		"prepublishOnly": "Build 'Source/**/*.ts'",
-		"start": "ng serve"
-	},
-	"type": "module",
-	"version": "0.0.1"
+	}
 }
