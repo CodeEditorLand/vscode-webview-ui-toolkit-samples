@@ -40,16 +40,16 @@
 		}
 	},
 	"dependencies": {
-		"weather-js": "^2.0.0"
+		"weather-js": "2.0.0"
 	},
 	"devDependencies": {
 		"@playform/build": "0.0.7",
 		"@playform/document": "0.0.6",
-		"@types/glob": "^8.0.0",
-		"@types/node": "16.x",
-		"esbuild": "^0.16.10",
-		"esbuild-plugin-copy": "^2.0.1",
-		"glob": "^8.0.3"
+		"@types/glob": "8.1.0",
+		"@types/node": "20.x",
+		"esbuild": "0.20.2",
+		"esbuild-plugin-copy": "2.1.1",
+		"glob": "10.3.12"
 	},
 	"publishConfig": {
 		"access": "public"

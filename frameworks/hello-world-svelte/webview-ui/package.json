@@ -28,12 +28,12 @@
 		"start": "sirv public --no-clear"
 	},
 	"dependencies": {
-		"sirv-cli": "^2.0.0"
+		"sirv-cli": "2.0.2"
 	},
 	"devDependencies": {
 		"@playform/build": "0.0.7",
 		"@playform/document": "0.0.6",
-		"tslib": "^2.0.0"
+		"tslib": "2.6.2"
 	},
 	"publishConfig": {
 		"access": "public"
