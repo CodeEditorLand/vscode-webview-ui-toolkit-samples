@@ -1,0 +1,214 @@
+name: NPM
+
+concurrency:
+    group: NPM-${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+permissions:
+    security-events: write
+    contents: write
+    pull-requests: write
+
+on:
+    workflow_dispatch:
+    release:
+        types: [created]
+    workflow_call:
+
+jobs:
+    Publish:
+        runs-on: ubuntu-latest
+
+        permissions:
+            contents: read
+            id-token: write
+
+        steps:
+            - uses: actions/checkout@v4.1.4
+
+            - uses: actions/setup-node@v4.0.2
+              with:
+                  node-version: "18"
+                  registry-url: "https://registry.npmjs.org"
+
+            - run: npm install -g npm
+
+            - name: Publish ./default/component-gallery
+              continue-on-error: true
+              working-directory: ./default/component-gallery
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./default/editable-data-grid
+              continue-on-error: true
+              working-directory: ./default/editable-data-grid
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./default/hello-world-webpack
+              continue-on-error: true
+              working-directory: ./default/hello-world-webpack
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./default/hello-world
+              continue-on-error: true
+              working-directory: ./default/hello-world
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./default/notepad
+              continue-on-error: true
+              working-directory: ./default/notepad
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./default/weather-webview
+              continue-on-error: true
+              working-directory: ./default/weather-webview
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./frameworks/component-gallery-react
+              continue-on-error: true
+              working-directory: ./frameworks/component-gallery-react
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./frameworks/component-gallery-react/webview-ui
+              continue-on-error: true
+              working-directory: ./frameworks/component-gallery-react/webview-ui
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./frameworks/hello-world-angular
+              continue-on-error: true
+              working-directory: ./frameworks/hello-world-angular
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./frameworks/hello-world-angular/webview-ui
+              continue-on-error: true
+              working-directory: ./frameworks/hello-world-angular/webview-ui
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./frameworks/hello-world-react-cra
+              continue-on-error: true
+              working-directory: ./frameworks/hello-world-react-cra
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./frameworks/hello-world-react-cra/webview-ui
+              continue-on-error: true
+              working-directory: ./frameworks/hello-world-react-cra/webview-ui
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./frameworks/hello-world-react-vite
+              continue-on-error: true
+              working-directory: ./frameworks/hello-world-react-vite
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./frameworks/hello-world-react-vite/webview-ui
+              continue-on-error: true
+              working-directory: ./frameworks/hello-world-react-vite/webview-ui
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./frameworks/hello-world-solidjs
+              continue-on-error: true
+              working-directory: ./frameworks/hello-world-solidjs
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./frameworks/hello-world-solidjs/webview-ui
+              continue-on-error: true
+              working-directory: ./frameworks/hello-world-solidjs/webview-ui
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./frameworks/hello-world-svelte
+              continue-on-error: true
+              working-directory: ./frameworks/hello-world-svelte
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./frameworks/hello-world-svelte/webview-ui
+              continue-on-error: true
+              working-directory: ./frameworks/hello-world-svelte/webview-ui
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./frameworks/hello-world-vue
+              continue-on-error: true
+              working-directory: ./frameworks/hello-world-vue
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./frameworks/hello-world-vue/webview-ui
+              continue-on-error: true
+              working-directory: ./frameworks/hello-world-vue/webview-ui
+              run: |
+                  npm install --include prod dev optional peer --legacy-peer-deps
+                  npm publish --legacy-peer-deps --provenance
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
