@@ -1,0 +1,57 @@
+{
+	"name": "vscode-weather-webview",
+	"displayName": "Check the weather",
+	"version": "0.0.1",
+	"private": false,
+	"description": "A sample extension to show off the Webview UI Toolkit for Visual Studio Code being used in a webview view.",
+	"keywords": [
+		"land"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandWebViewUIToolkitSamples.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
+	"main": "./out/extension.js",
+	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
+		"compile": "node ./esbuild.js",
+		"prepublishOnly": "Build 'Source/**/*.ts'"
+	},
+	"contributes": {
+		"views": {
+			"explorer": [
+				{
+					"id": "weather.weatherView",
+					"name": "Weather",
+					"type": "webview"
+				}
+			]
+		}
+	},
+	"dependencies": {
+		"weather-js": "2.0.0"
+	},
+	"devDependencies": {
+		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6",
+		"@types/glob": "8.1.0",
+		"@types/node": "20.x",
+		"esbuild": "0.20.2",
+		"esbuild-plugin-copy": "2.1.1",
+		"glob": "10.3.12"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

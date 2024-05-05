@@ -1,0 +1,51 @@
+{
+	"name": "hello-world",
+	"displayName": "hello-world",
+	"version": "0.0.1",
+	"private": false,
+	"description": "A hello world sample extension to show off the Webview UI Toolkit for Visual Studio Code.",
+	"keywords": [
+		"land"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkitSamples/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandWebViewUIToolkitSamples.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
+	"main": "./out/extension.js",
+	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
+		"compile": "node ./esbuild.js",
+		"prepublishOnly": "Build 'Source/**/*.ts'"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "hello-world.showHelloWorld",
+				"title": "Hello World: Show"
+			}
+		]
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6",
+		"@types/glob": "8.1.0",
+		"@types/node": "20.x",
+		"esbuild": "0.20.2",
+		"glob": "10.3.12"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
