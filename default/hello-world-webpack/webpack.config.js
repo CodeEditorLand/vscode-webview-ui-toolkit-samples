@@ -5,9 +5,9 @@
 const path = require("path");
 
 //@ts-check
-/** @typedef {import('webpack').Configuration} WebpackConfig **/
 
-/** @type WebpackConfig */
+
+
 const baseConfig = {
   mode: "none", // this leaves the source code as close as possible to the original (when packaging we set this to 'production')
   externals: {
@@ -33,7 +33,7 @@ const baseConfig = {
 };
 
 // Config for extension source code (to be run in a Node-based context)
-/** @type WebpackConfig */
+
 const extensionConfig = {
   ...baseConfig,
   target: "node",
@@ -47,7 +47,7 @@ const extensionConfig = {
 };
 
 // Config for webview source code (to be run in a web-based context)
-/** @type WebpackConfig */
+
 const webviewConfig = {
   ...baseConfig,
   target: ["web", "es2020"],
