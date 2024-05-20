@@ -2,9 +2,9 @@ const { build } = require("esbuild");
 const { copy } = require("esbuild-plugin-copy");
 
 //@ts-check
+/** @typedef {import('esbuild').BuildOptions} BuildOptions **/
 
-
-
+/** @type BuildOptions */
 const baseConfig = {
   bundle: true,
   minify: process.env.NODE_ENV === "production",
@@ -12,7 +12,7 @@ const baseConfig = {
 };
 
 // Config for extension source code (to be run in a Node-based context)
-
+/** @type BuildOptions */
 const extensionConfig = {
   ...baseConfig,
   platform: "node",
@@ -24,7 +24,7 @@ const extensionConfig = {
 };
 
 // Config for webview source code (to be run in a web-based context)
-
+/** @type BuildOptions */
 const webviewConfig = {
   ...baseConfig,
   target: "es2020",
@@ -45,7 +45,7 @@ const webviewConfig = {
 
 // This watch config adheres to the conventions of the esbuild-problem-matchers
 // extension (https://github.com/connor4312/esbuild-problem-matchers#esbuild-via-js)
-
+/** @type BuildOptions */
 const watchConfig = {
   watch: {
     onRebuild(error, result) {

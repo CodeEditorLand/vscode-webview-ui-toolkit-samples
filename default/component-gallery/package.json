@@ -1,28 +1,42 @@
 {
-	"name": "component-gallery",
-	"displayName": "component-gallery",
-	"description": "A sample extension to show off all components in the Webview UI Toolkit for Visual Studio Code.",
-	"main": "./out/extension.js",
-	"scripts": {
-		"Document": "Document 'Source/**/*.ts'",
-		"compile": "node ./esbuild.js",
-		"prepublishOnly": "Build 'Source/**/*.ts'"
-	},
-	"contributes": {
-		"commands": [
-			{
-				"command": "component-gallery.showGallery",
-				"title": "Component Gallery: Show"
-			}
-		]
-	},
-	"dependencies": {},
-	"devDependencies": {
-		"@playform/build": "0.0.7",
-		"@types/glob": "8.1.0",
-		"@types/node": "20.x",
-		"esbuild": "0.20.2",
-		"esbuild-plugin-copy": "2.1.1",
-		"glob": "10.3.12"
-	}
+  "name": "component-gallery",
+  "displayName": "component-gallery",
+  "description": "A sample extension to show off all components in the Webview UI Toolkit for Visual Studio Code.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "component-gallery.showGallery",
+        "title": "Component Gallery: Show"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "node ./esbuild.js",
+    "package": "NODE_ENV=production node ./esbuild.js",
+    "watch": "node ./esbuild.js --watch",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@types/vscode-webview": "^1.57.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "esbuild": "^0.16.10",
+    "esbuild-plugin-copy": "^2.0.1",
+    "eslint": "^8.26.0",
+    "glob": "^8.0.3",
+    "prettier": "^2.8.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@vscode/webview-ui-toolkit": "^1.2.2"
+  }
 }
