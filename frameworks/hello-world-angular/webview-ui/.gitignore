@@ -3,14 +3,11 @@
 # Compiled output
 /dist
 /build
-/tmp
 /out-tsc
 /bazel-out
 
 # Node
 /node_modules
-npm-debug.log
-yarn-error.log
 
 # IDEs and editors
 .idea/
@@ -39,5 +36,4 @@ testem.log
 /typings
 
 # System files
-.DS_Store
 Thumbs.db

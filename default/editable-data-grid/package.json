@@ -19,6 +19,6 @@
 		"@types/glob": "8.1.0",
 		"@types/node": "20.x",
 		"esbuild": "0.21.3",
-		"glob": "10.3.15"
+		"glob": "10.3.16"
 	}
 }

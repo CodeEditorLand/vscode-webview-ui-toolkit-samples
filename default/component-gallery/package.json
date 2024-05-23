@@ -20,6 +20,6 @@
 		"@types/node": "20.x",
 		"esbuild": "0.21.3",
 		"esbuild-plugin-copy": "2.1.1",
-		"glob": "10.3.15"
+		"glob": "10.3.16"
 	}
 }
