@@ -9,9 +9,9 @@
 	},
 	"description": "A hello world sample extension to demonstrate using Angular with the Webview UI Toolkit for VS Code.",
 	"devDependencies": {
-		"@types/glob": "^8.1.0",
-		"@types/node": "^20.14.2",
-		"glob": "^10.4.1"
+		"@types/glob": "8.1.0",
+		"@types/node": "20.14.2",
+		"glob": "10.4.1"
 	},
 	"displayName": "hello-world-angular",
 	"main": "./out/extension.js",

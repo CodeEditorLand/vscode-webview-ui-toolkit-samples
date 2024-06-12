@@ -13,8 +13,8 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "^20.14.2",
-		"rewire": "^7.0.0"
+		"@types/node": "20.14.2",
+		"rewire": "7.0.0"
 	},
 	"name": "hello-world",
 	"scripts": {
