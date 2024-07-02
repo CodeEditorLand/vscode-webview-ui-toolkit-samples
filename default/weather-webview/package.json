@@ -23,7 +23,7 @@
 	"devDependencies": {
 		"@types/glob": "8.1.0",
 		"@types/node": "20.x",
-		"esbuild": "0.22.0",
+		"esbuild": "0.23.0",
 		"esbuild-plugin-copy": "2.1.1",
 		"glob": "10.4.2"
 	}
