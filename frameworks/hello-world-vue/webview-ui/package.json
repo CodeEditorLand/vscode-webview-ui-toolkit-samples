@@ -1,7 +1,7 @@
 {
 	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "^16.11.27"
+		"@types/node": "16.11.27"
 	},
 	"name": "hello-world",
 	"scripts": {

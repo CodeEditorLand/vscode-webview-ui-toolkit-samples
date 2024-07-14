@@ -10,10 +10,10 @@
 	"dependencies": {},
 	"description": "A sample extension that demonstrates a solution for making editable data grids.",
 	"devDependencies": {
-		"@types/glob": "^8.0.0",
+		"@types/glob": "8.0.0",
 		"@types/node": "16.x",
-		"esbuild": "^0.16.10",
-		"glob": "^8.0.3"
+		"esbuild": "0.16.10",
+		"glob": "8.0.3"
 	},
 	"displayName": "editable-data-grid",
 	"main": "./out/extension.js",
