@@ -6,9 +6,9 @@
 		"start": "sirv public --no-clear"
 	},
 	"dependencies": {
-		"sirv-cli": "2.0.2"
+		"sirv-cli": "2.0.0"
 	},
 	"devDependencies": {
-		"tslib": "2.6.3"
+		"tslib": "2.0.0"
 	}
 }
