@@ -16,9 +16,9 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@types/glob": "8.0.0",
-		"@types/node": "16.x",
-		"esbuild": "0.16.10",
-		"glob": "8.0.3"
+		"@types/glob": "8.1.0",
+		"@types/node": "20.x",
+		"esbuild": "0.23.0",
+		"glob": "11.0.0"
 	}
 }
