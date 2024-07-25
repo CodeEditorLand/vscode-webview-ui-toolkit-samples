@@ -56,7 +56,7 @@ Commit your changes and push your branch to GitHub.
 
 ```
 git add .
-git commit -m "Detailed description of your changes."
+git ecommit -m "Detailed description of your changes."
 ```
 
 ### Pull any upstream changes

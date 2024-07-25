@@ -1,4 +1,11 @@
 {
+	"name": "editable-data-grid",
+	"displayName": "editable-data-grid",
+	"description": "A sample extension that demonstrates a solution for making editable data grids.",
+	"main": "./out/extension.js",
+	"scripts": {
+		"compile": "node ./esbuild.js"
+	},
 	"contributes": {
 		"commands": [
 			{
@@ -8,17 +15,10 @@
 		]
 	},
 	"dependencies": {},
-	"description": "A sample extension that demonstrates a solution for making editable data grids.",
 	"devDependencies": {
-		"@types/glob": "^8.0.0",
-		"@types/node": "16.x",
-		"esbuild": "^0.16.10",
-		"glob": "^8.0.3"
-	},
-	"displayName": "editable-data-grid",
-	"main": "./out/extension.js",
-	"name": "editable-data-grid",
-	"scripts": {
-		"compile": "node ./esbuild.js"
+		"@types/glob": "8.1.0",
+		"@types/node": "20.x",
+		"esbuild": "0.23.0",
+		"glob": "11.0.0"
 	}
 }
