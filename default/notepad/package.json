@@ -53,16 +53,16 @@
 		]
 	},
 	"dependencies": {
-		"uuid": "^9.0.0"
+		"uuid": "9.0.0"
 	},
 	"description": "A sample extension that showcases the Webview UI Toolkit for VS Code alongside the VS Code TreeView and Webview API",
 	"devDependencies": {
-		"@types/glob": "^8.0.0",
-		"@types/node": "16.x",
-		"@types/uuid": "^9.0.0",
-		"esbuild": "^0.16.10",
-		"esbuild-plugin-copy": "^2.0.1",
-		"glob": "^8.0.3"
+		"@types/glob": "8.0.0",
+		"@types/node": "16.0",
+		"@types/uuid": "9.0.0",
+		"esbuild": "0.16.10",
+		"esbuild-plugin-copy": "2.0.1",
+		"glob": "8.0.3"
 	},
 	"displayName": "notepad",
 	"main": "./out/extension.js",

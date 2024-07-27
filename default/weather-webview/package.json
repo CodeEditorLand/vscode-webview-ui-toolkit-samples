@@ -11,15 +11,15 @@
 		}
 	},
 	"dependencies": {
-		"weather-js": "^2.0.0"
+		"weather-js": "2.0.0"
 	},
 	"description": "A sample extension to show off the Webview UI Toolkit for Visual Studio Code being used in a webview view.",
 	"devDependencies": {
-		"@types/glob": "^8.0.0",
-		"@types/node": "16.x",
-		"esbuild": "^0.16.10",
-		"esbuild-plugin-copy": "^2.0.1",
-		"glob": "^8.0.3"
+		"@types/glob": "8.0.0",
+		"@types/node": "16.0",
+		"esbuild": "0.16.10",
+		"esbuild-plugin-copy": "2.0.1",
+		"glob": "8.0.3"
 	},
 	"displayName": "Check the weather",
 	"main": "./out/extension.js",
