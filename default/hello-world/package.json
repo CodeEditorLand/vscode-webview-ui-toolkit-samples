@@ -10,10 +10,10 @@
 	"dependencies": {},
 	"description": "A hello world sample extension to show off the Webview UI Toolkit for Visual Studio Code.",
 	"devDependencies": {
-		"@types/glob": "8.0.0",
-		"@types/node": "16.0",
-		"esbuild": "0.16.10",
-		"glob": "8.0.3"
+		"@types/glob": "8.1.0",
+		"@types/node": "22.0",
+		"esbuild": "0.23.0",
+		"glob": "11.0.0"
 	},
 	"displayName": "hello-world",
 	"main": "./out/extension.js",
