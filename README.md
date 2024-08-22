@@ -1,9 +1,12 @@
 # Webview UI Toolkit Sample Extensions
 
-> [!WARNING]
-> The Webview UI Toolkit for VS Code will be deprecated on January 1, 2025. See the [deprecation announcement](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/561) for more details.
+> [!WARNING] The Webview UI Toolkit for VS Code will be deprecated on January
+> 1, 2025. See the
+> [deprecation announcement](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/561)
+> for more details.
 
-This repository contains all the sample extensions for the [Webview UI Toolkit for Visual Studio Code](https://github.com/microsoft/vscode-webview-toolkit).
+This repository contains all the sample extensions for the
+[Webview UI Toolkit for Visual Studio Code](https://github.com/microsoft/vscode-webview-toolkit).
 
 Each sample is a self-contained extension, and demonstrates some aspect of the
 toolkit and/or the
