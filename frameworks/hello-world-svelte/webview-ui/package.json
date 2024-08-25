@@ -3,7 +3,7 @@
 		"sirv-cli": "2.0.2"
 	},
 	"devDependencies": {
-		"tslib": "2.6.3"
+		"tslib": "2.7.0"
 	},
 	"name": "hello-world",
 	"scripts": {
