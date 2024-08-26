@@ -17,7 +17,7 @@
 	},
 	"displayName": "hello-world",
 	"main": "./out/extension.js",
-	"name": "hello-world",
+	"name": "hello-world-webpack",
 	"scripts": {
 		"compile": "webpack"
 	}

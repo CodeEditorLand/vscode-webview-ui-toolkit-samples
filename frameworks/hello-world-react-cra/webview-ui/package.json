@@ -16,7 +16,7 @@
 		"@types/node": "22.5.0",
 		"rewire": "7.0.0"
 	},
-	"name": "hello-world",
+	"name": "hello-world-react-cra",
 	"scripts": {
 		"build": "node ./scripts/build-react-no-split.js",
 		"eject": "react-scripts eject",

@@ -3,7 +3,7 @@
 	"devDependencies": {
 		"@types/node": "22.5.0"
 	},
-	"name": "hello-world",
+	"name": "webview-ui-hello-world-vue",
 	"scripts": {
 		"build": "vue-tsc --noEmit && vite build",
 		"preview": "vite preview --port 5050",

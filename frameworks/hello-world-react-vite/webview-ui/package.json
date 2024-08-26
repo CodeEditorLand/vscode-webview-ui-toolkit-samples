@@ -1,7 +1,7 @@
 {
 	"dependencies": {},
 	"devDependencies": {},
-	"name": "hello-world",
+	"name": "hello-world-react-vite",
 	"scripts": {
 		"build": "tsc && vite build",
 		"preview": "vite preview",

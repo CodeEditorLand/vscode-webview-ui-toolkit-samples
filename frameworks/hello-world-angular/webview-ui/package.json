@@ -24,7 +24,7 @@
 		"karma-jasmine": "5.1.0",
 		"karma-jasmine-html-reporter": "2.1.0"
 	},
-	"name": "hello-world",
+	"name": "hello-world-angular",
 	"scripts": {
 		"build": "ng build --output-hashing=none",
 		"ng": "ng",

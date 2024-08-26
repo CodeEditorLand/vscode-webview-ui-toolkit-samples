@@ -5,7 +5,7 @@
 	"devDependencies": {
 		"tslib": "2.7.0"
 	},
-	"name": "hello-world",
+	"name": "hello-world-svelte",
 	"scripts": {
 		"build": "rollup -c",
 		"dev": "rollup -c -w",
