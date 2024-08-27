@@ -21,7 +21,7 @@ to run the samples. We recommend you use the Node version used for Visual Studio
 Code development itself, which is documented
 [here](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#prerequisites).
 
-## Usage
+## 🛠️ Usage
 
 Follow the instructions in the `README` file of the desired sample extension.
 
