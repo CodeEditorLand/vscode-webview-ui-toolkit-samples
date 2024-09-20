@@ -1,73 +1,89 @@
 {
-	"contributes": {
-		"commands": [
-			{
-				"command": "notepad.createNote",
-				"icon": "$(add)",
-				"title": "Notepad: Create a note"
-			},
-			{
-				"command": "notepad.deleteNote",
-				"icon": "$(trash)",
-				"title": "Notepad: Delete note"
-			}
-		],
-		"menus": {
-			"view/item/context": [
-				{
-					"command": "notepad.deleteNote",
-					"group": "inline"
-				}
-			],
-			"view/title": [
-				{
-					"command": "notepad.createNote",
-					"group": "navigation@1"
-				}
-			]
-		},
-		"views": {
-			"notepad": [
-				{
-					"id": "notepad.notesList",
-					"name": "My Notes",
-					"type": "tree",
-					"visibility": "visible"
-				}
-			]
-		},
-		"viewsContainers": {
-			"activitybar": [
-				{
-					"icon": "$(notebook)",
-					"id": "notepad",
-					"title": "Notepad"
-				}
-			]
-		},
-		"viewsWelcome": [
-			{
-				"contents": "No notes yet!\n[Create a note](command:notepad.createNote)",
-				"view": "notepad.notesList"
-			}
-		]
-	},
-	"dependencies": {
-		"uuid": "^9.0.0"
-	},
-	"description": "A sample extension that showcases the Webview UI Toolkit for VS Code alongside the VS Code TreeView and Webview API",
-	"devDependencies": {
-		"@types/glob": "^8.0.0",
-		"@types/node": "16.x",
-		"@types/uuid": "^9.0.0",
-		"esbuild": "^0.16.10",
-		"esbuild-plugin-copy": "^2.0.1",
-		"glob": "^8.0.3"
-	},
-	"displayName": "notepad",
-	"main": "./out/extension.js",
-	"name": "notepad",
-	"scripts": {
-		"compile": "node ./esbuild.js"
-	}
+  "name": "notepad",
+  "displayName": "notepad",
+  "description": "A sample extension that showcases the Webview UI Toolkit for VS Code alongside the VS Code TreeView and Webview API",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "notepad.createNote",
+        "title": "Notepad: Create a note",
+        "icon": "$(add)"
+      },
+      {
+        "command": "notepad.deleteNote",
+        "title": "Notepad: Delete note",
+        "icon": "$(trash)"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "notepad",
+          "title": "Notepad",
+          "icon": "$(notebook)"
+        }
+      ]
+    },
+    "views": {
+      "notepad": [
+        {
+          "id": "notepad.notesList",
+          "name": "My Notes",
+          "type": "tree",
+          "visibility": "visible"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "notepad.notesList",
+        "contents": "No notes yet!\n[Create a note](command:notepad.createNote)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "notepad.createNote",
+          "group": "navigation@1"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "notepad.deleteNote",
+          "group": "inline"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "node ./esbuild.js",
+    "package": "NODE_ENV=production node ./esbuild.js",
+    "watch": "node ./esbuild.js --watch",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/node": "16.x",
+    "@types/uuid": "^9.0.0",
+    "@types/vscode": "^1.74.0",
+    "@types/vscode-webview": "^1.57.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "esbuild": "^0.16.10",
+    "esbuild-plugin-copy": "^2.0.1",
+    "eslint": "^8.26.0",
+    "glob": "^8.0.3",
+    "prettier": "^2.8.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@vscode/webview-ui-toolkit": "^1.2.2",
+    "uuid": "^9.0.0"
+  }
 }
