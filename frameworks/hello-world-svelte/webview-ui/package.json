@@ -1,9 +1,9 @@
 {
 	"dependencies": {
-		"sirv-cli": "^2.0.0"
+		"sirv-cli": "2.0.2"
 	},
 	"devDependencies": {
-		"tslib": "^2.0.0"
+		"tslib": "2.7.0"
 	},
 	"name": "hello-world",
 	"scripts": {

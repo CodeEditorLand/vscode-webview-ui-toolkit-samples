@@ -10,11 +10,11 @@
 	"dependencies": {},
 	"description": "A sample extension to show off all components in the Webview UI Toolkit for Visual Studio Code.",
 	"devDependencies": {
-		"@types/glob": "^8.0.0",
-		"@types/node": "16.x",
-		"esbuild": "^0.16.10",
-		"esbuild-plugin-copy": "^2.0.1",
-		"glob": "^8.0.3"
+		"@types/glob": "8.1.0",
+		"@types/node": "22.x",
+		"esbuild": "0.24.0",
+		"esbuild-plugin-copy": "2.1.1",
+		"glob": "11.0.0"
 	},
 	"displayName": "component-gallery",
 	"main": "./out/extension.js",
