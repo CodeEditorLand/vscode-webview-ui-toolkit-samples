@@ -1,10 +1,10 @@
 {
-	"dependencies": {},
-	"devDependencies": {},
 	"name": "hello-world",
 	"scripts": {
 		"build": "tsc && vite build",
 		"preview": "vite preview",
 		"start": "vite"
-	}
+	},
+	"dependencies": {},
+	"devDependencies": {}
 }

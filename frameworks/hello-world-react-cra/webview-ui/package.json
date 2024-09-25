@@ -1,4 +1,10 @@
 {
+	"name": "hello-world",
+	"scripts": {
+		"build": "node ./scripts/build-react-no-split.js",
+		"eject": "react-scripts eject",
+		"start": "EXTEND_ESLINT=true react-scripts start"
+	},
 	"browserslist": {
 		"development": [
 			"last 1 chrome version",
@@ -15,11 +21,5 @@
 	"devDependencies": {
 		"@types/node": "22.6.0",
 		"rewire": "7.0.0"
-	},
-	"name": "hello-world",
-	"scripts": {
-		"build": "node ./scripts/build-react-no-split.js",
-		"eject": "react-scripts eject",
-		"start": "EXTEND_ESLINT=true react-scripts start"
 	}
 }
