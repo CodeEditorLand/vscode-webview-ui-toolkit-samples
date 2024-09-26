@@ -1,11 +1,4 @@
 {
-	"name": "notepad",
-	"displayName": "notepad",
-	"description": "A sample extension that showcases the Webview UI Toolkit for VS Code alongside the VS Code TreeView and Webview API",
-	"main": "./out/extension.js",
-	"scripts": {
-		"compile": "node ./esbuild.js"
-	},
 	"contributes": {
 		"commands": [
 			{
@@ -62,6 +55,7 @@
 	"dependencies": {
 		"uuid": "10.0.0"
 	},
+	"description": "A sample extension that showcases the Webview UI Toolkit for VS Code alongside the VS Code TreeView and Webview API",
 	"devDependencies": {
 		"@types/glob": "8.1.0",
 		"@types/node": "22.x",
@@ -69,5 +63,11 @@
 		"esbuild": "0.24.0",
 		"esbuild-plugin-copy": "2.1.1",
 		"glob": "11.0.0"
+	},
+	"displayName": "notepad",
+	"main": "./out/extension.js",
+	"name": "notepad",
+	"scripts": {
+		"compile": "node ./esbuild.js"
 	}
 }
