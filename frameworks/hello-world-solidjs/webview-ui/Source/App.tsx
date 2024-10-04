@@ -1,6 +1,11 @@
+import {
+	provideVSCodeDesignSystem,
+	vsCodeButton,
+} from "@vscode/webview-ui-toolkit";
 import type { Component } from "solid-js";
-import { provideVSCodeDesignSystem, vsCodeButton } from "@vscode/webview-ui-toolkit";
+
 import { vscode } from "./utilities/vscode";
+
 import "./App.css";
 
 // In order to use the Webview UI Toolkit web components they
@@ -23,19 +28,19 @@ provideVSCodeDesignSystem().register(vsCodeButton());
 // provideVSCodeDesignSystem().register(allComponents);
 
 const App: Component = () => {
-  function handleHowdyClick() {
-    vscode.postMessage({
-      command: "hello",
-      text: "Hey there partner! 🤠",
-    });
-  }
+	function handleHowdyClick() {
+		vscode.postMessage({
+			command: "hello",
+			text: "Hey there partner! 🤠",
+		});
+	}
 
-  return (
-    <main>
-      <h1>Hello world!</h1>
-      <vscode-button onClick={handleHowdyClick}>Howdy!</vscode-button>
-    </main>
-  );
+	return (
+		<main>
+			<h1>Hello world!</h1>
+			<vscode-button onClick={handleHowdyClick}>Howdy!</vscode-button>
+		</main>
+	);
 };
 
 export default App;
