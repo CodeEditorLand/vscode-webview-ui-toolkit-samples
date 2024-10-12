@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"sirv-cli": "2.0.2"
+		"sirv-cli": "3.0.0"
 	},
 	"devDependencies": {
 		"tslib": "2.7.0"
