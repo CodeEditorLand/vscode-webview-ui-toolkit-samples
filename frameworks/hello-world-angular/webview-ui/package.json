@@ -1,4 +1,10 @@
 {
+	"name": "hello-world",
+	"scripts": {
+		"build": "ng build --output-hashing=none",
+		"ng": "ng",
+		"start": "ng serve"
+	},
 	"dependencies": {
 		"@angular/animations": "18.2.8",
 		"@angular/common": "18.2.8",
@@ -23,11 +29,5 @@
 		"karma-coverage": "2.2.1",
 		"karma-jasmine": "5.1.0",
 		"karma-jasmine-html-reporter": "2.1.0"
-	},
-	"name": "hello-world",
-	"scripts": {
-		"build": "ng build --output-hashing=none",
-		"ng": "ng",
-		"start": "ng serve"
 	}
 }
