@@ -1,4 +1,14 @@
 {
+	"name": "hello-world-vue",
+	"displayName": "hello-world-vue",
+	"description": "A hello world sample extension to demonstrate using Vue with the Webview UI Toolkit for VS Code.",
+	"main": "./out/extension.js",
+	"scripts": {
+		"build:webview": "cd webview-ui && npm run build",
+		"compile": "tsc -p ./",
+		"install:all": "npm install && cd webview-ui && npm install",
+		"start:webview": "cd webview-ui && npm run start"
+	},
 	"contributes": {
 		"commands": [
 			{
@@ -7,19 +17,9 @@
 			}
 		]
 	},
-	"description": "A hello world sample extension to demonstrate using Vue with the Webview UI Toolkit for VS Code.",
 	"devDependencies": {
 		"@types/glob": "8.1.0",
 		"@types/node": "22.7.5",
 		"glob": "11.0.0"
-	},
-	"displayName": "hello-world-vue",
-	"main": "./out/extension.js",
-	"name": "hello-world-vue",
-	"scripts": {
-		"build:webview": "cd webview-ui && npm run build",
-		"compile": "tsc -p ./",
-		"install:all": "npm install && cd webview-ui && npm install",
-		"start:webview": "cd webview-ui && npm run start"
 	}
 }
