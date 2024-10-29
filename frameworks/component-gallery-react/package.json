@@ -10,7 +10,7 @@
 	"description": "A sample extension to show off all React components in the Webview UI Toolkit for Visual Studio Code.",
 	"devDependencies": {
 		"@types/glob": "8.1.0",
-		"@types/node": "22.8.1",
+		"@types/node": "22.8.2",
 		"glob": "11.0.0"
 	},
 	"displayName": "component-gallery-react",
