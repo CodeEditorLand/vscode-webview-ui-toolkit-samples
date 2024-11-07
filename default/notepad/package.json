@@ -58,7 +58,7 @@
 	"description": "A sample extension that showcases the Webview UI Toolkit for VS Code alongside the VS Code TreeView and Webview API",
 	"devDependencies": {
 		"@types/glob": "8.1.0",
-		"@types/node": "22.8.6",
+		"@types/node": "22.9.0",
 		"@types/uuid": "10.0.0",
 		"esbuild": "0.24.0",
 		"esbuild-plugin-copy": "2.1.1",
