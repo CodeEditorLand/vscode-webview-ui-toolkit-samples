@@ -53,7 +53,7 @@
 		]
 	},
 	"dependencies": {
-		"uuid": "11.0.2"
+		"uuid": "11.0.3"
 	},
 	"description": "A sample extension that showcases the Webview UI Toolkit for VS Code alongside the VS Code TreeView and Webview API",
 	"devDependencies": {
