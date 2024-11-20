@@ -11,7 +11,7 @@
 	"description": "A hello world sample extension to show off the Webview UI Toolkit for Visual Studio Code.",
 	"devDependencies": {
 		"@types/glob": "8.1.0",
-		"@types/node": "22.9.0",
+		"@types/node": "22.9.1",
 		"esbuild": "0.24.0",
 		"glob": "11.0.0"
 	},
