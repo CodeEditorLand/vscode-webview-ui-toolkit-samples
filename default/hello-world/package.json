@@ -1,11 +1,4 @@
 {
-	"name": "hello-world",
-	"displayName": "hello-world",
-	"description": "A hello world sample extension to show off the Webview UI Toolkit for Visual Studio Code.",
-	"main": "./out/extension.js",
-	"scripts": {
-		"compile": "node ./esbuild.js"
-	},
 	"contributes": {
 		"commands": [
 			{
@@ -15,10 +8,17 @@
 		]
 	},
 	"dependencies": {},
+	"description": "A hello world sample extension to show off the Webview UI Toolkit for Visual Studio Code.",
 	"devDependencies": {
 		"@types/glob": "8.1.0",
 		"@types/node": "22.9.1",
 		"esbuild": "0.24.0",
 		"glob": "11.0.0"
+	},
+	"displayName": "hello-world",
+	"main": "./out/extension.js",
+	"name": "hello-world",
+	"scripts": {
+		"compile": "node ./esbuild.js"
 	}
 }
