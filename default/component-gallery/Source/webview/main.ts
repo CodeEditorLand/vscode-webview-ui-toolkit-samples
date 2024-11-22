@@ -22,6 +22,7 @@ function main() {
 
 	// Define default data grid
 	const defaultDataGrid = document.getElementById("default-grid") as DataGrid;
+
 	defaultDataGrid.rowsData = [
 		{
 			column1: "Cell Data",
@@ -47,6 +48,7 @@ function main() {
 	const basicDataGridList = document.querySelectorAll(
 		".basic-grid",
 	) as NodeListOf<DataGrid>;
+
 	for (const basicDataGrid of basicDataGridList) {
 		basicDataGrid.rowsData = [
 			{

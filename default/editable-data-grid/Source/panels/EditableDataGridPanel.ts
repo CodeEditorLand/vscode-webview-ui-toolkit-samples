@@ -91,6 +91,7 @@ export class EditableDataGridPanel {
 		// Dispose of all disposables (i.e. commands) associated with the current webview panel
 		while (this._disposables.length) {
 			const disposable = this._disposables.pop();
+
 			if (disposable) {
 				disposable.dispose();
 			}
@@ -110,6 +111,7 @@ export class EditableDataGridPanel {
 	 */
 	private _getWebviewContent(webview: Webview, extensionUri: Uri) {
 		const webviewUri = getUri(webview, extensionUri, ["out", "webview.js"]);
+
 		const nonce = getNonce();
 
 		// Tip: Install the es6-string-html VS Code extension to enable code highlighting below

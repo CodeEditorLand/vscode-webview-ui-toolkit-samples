@@ -45,6 +45,7 @@ function main() {
 
 function checkWeather() {
 	const location = document.getElementById("location") as TextField;
+
 	const unit = document.getElementById("unit") as Dropdown;
 
 	// Passes a message back to the extension context with the location that
@@ -68,9 +69,12 @@ function setVSCodeMessageListener() {
 			case "weather":
 				const weatherData = JSON.parse(event.data.payload);
 				displayWeatherData(weatherData);
+
 				break;
+
 			case "error":
 				displayError(event.data.message);
+
 				break;
 		}
 	});
@@ -78,8 +82,11 @@ function setVSCodeMessageListener() {
 
 function displayLoadingState() {
 	const loading = document.getElementById("loading") as ProgressRing;
+
 	const icon = document.getElementById("icon");
+
 	const summary = document.getElementById("summary");
+
 	if (loading && icon && summary) {
 		loading.classList.remove("hidden");
 		icon.classList.add("hidden");
@@ -89,8 +96,11 @@ function displayLoadingState() {
 
 function displayWeatherData(weatherData) {
 	const loading = document.getElementById("loading") as ProgressRing;
+
 	const icon = document.getElementById("icon");
+
 	const summary = document.getElementById("summary");
+
 	if (loading && icon && summary) {
 		loading.classList.add("hidden");
 		icon.classList.remove("hidden");
@@ -101,8 +111,11 @@ function displayWeatherData(weatherData) {
 
 function displayError(errorMsg) {
 	const loading = document.getElementById("loading") as ProgressRing;
+
 	const icon = document.getElementById("icon");
+
 	const summary = document.getElementById("summary");
+
 	if (loading && icon && summary) {
 		loading.classList.add("hidden");
 		icon.classList.add("hidden");
@@ -112,7 +125,9 @@ function displayError(errorMsg) {
 
 function getWeatherSummary(weatherData) {
 	const skyText = weatherData.current.skytext;
+
 	const temperature = weatherData.current.temperature;
+
 	const degreeType = weatherData.location.degreetype;
 
 	return `${skyText}, ${temperature}${degreeType}`;
@@ -120,33 +135,50 @@ function getWeatherSummary(weatherData) {
 
 function getWeatherIcon(weatherData) {
 	const skyText = weatherData.current.skytext.toLowerCase();
+
 	let icon = "";
 
 	switch (skyText) {
 		case "sunny":
 			icon = "☀️";
+
 			break;
+
 		case "mostly sunny":
 			icon = "🌤";
+
 			break;
+
 		case "partly sunny":
 			icon = "🌥";
+
 			break;
+
 		case "clear":
 			icon = "☀️";
+
 			break;
+
 		case "fair":
 			icon = "🌥";
+
 			break;
+
 		case "mostly cloudy":
 			icon = "☁️";
+
 			break;
+
 		case "cloudy":
 			icon = "☁️";
+
 			break;
+
 		case "rain showers":
 			icon = "🌦";
+
 			break;
+
 		default:
 			icon = "✨";
 	}

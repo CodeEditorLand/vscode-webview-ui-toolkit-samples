@@ -95,6 +95,7 @@ export class HelloWorldPanel {
 		// Dispose of all disposables (i.e. commands) associated with the current webview panel
 		while (this._disposables.length) {
 			const disposable = this._disposables.pop();
+
 			if (disposable) {
 				disposable.dispose();
 			}
@@ -114,6 +115,7 @@ export class HelloWorldPanel {
 	 */
 	private _getWebviewContent(webview: Webview, extensionUri: Uri) {
 		const webviewUri = getUri(webview, extensionUri, ["out", "webview.js"]);
+
 		const nonce = getNonce();
 
 		// Tip: Install the es6-string-html VS Code extension to enable code highlighting below
@@ -145,12 +147,14 @@ export class HelloWorldPanel {
 		webview.onDidReceiveMessage(
 			(message: any) => {
 				const command = message.command;
+
 				const text = message.text;
 
 				switch (command) {
 					case "hello":
 						// Code that should run in response to the hello message command
 						window.showInformationMessage(text);
+
 						return;
 					// Add more switch case statements here as more webview message commands
 					// are created within the webview context (i.e. inside src/webview/main.ts)

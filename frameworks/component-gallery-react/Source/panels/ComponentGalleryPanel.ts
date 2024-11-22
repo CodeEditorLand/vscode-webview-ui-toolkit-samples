@@ -94,6 +94,7 @@ export class ComponentGalleryPanel {
 		// Dispose of all disposables (i.e. commands) for the current webview panel
 		while (this._disposables.length) {
 			const disposable = this._disposables.pop();
+
 			if (disposable) {
 				disposable.dispose();
 			}

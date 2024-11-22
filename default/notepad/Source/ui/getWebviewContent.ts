@@ -19,19 +19,23 @@ export function getWebviewContent(
 	note: Note,
 ) {
 	const webviewUri = getUri(webview, extensionUri, ["out", "webview.js"]);
+
 	const styleUri = getUri(webview, extensionUri, ["out", "style.css"]);
 
 	const nonce = getNonce();
+
 	const formattedTags = note.tags ? note.tags.join(", ") : null;
 
 	webview.onDidReceiveMessage((message) => {
 		const command = message.command;
+
 		switch (command) {
 			case "requestNoteData":
 				webview.postMessage({
 					command: "receiveDataInWebview",
 					payload: JSON.stringify(note),
 				});
+
 				break;
 		}
 	});

@@ -110,9 +110,11 @@ function initEditableDataGrid(id: string) {
 		const handleKeydownClosure = (e: KeyboardEvent) => {
 			handleKeydown(e, cell);
 		};
+
 		const handleClickClosure = () => {
 			setCellEditable(cell);
 		};
+
 		const handleBlurClosure = () => {
 			syncCellChanges(cell);
 			unsetCellEditable(cell);
@@ -146,6 +148,7 @@ function handleKeydown(e: KeyboardEvent, cell: DataGridCell) {
 	) {
 		if (e.key === "Enter") {
 			e.preventDefault();
+
 			setCellEditable(cell);
 		}
 	} else {
@@ -166,6 +169,7 @@ function unsetCellEditable(cell: DataGridCell) {
 // Select the text of an editable cell
 function selectCellText(cell: DataGridCell) {
 	const selection = window.getSelection();
+
 	if (selection) {
 		const range = document.createRange();
 		range.selectNodeContents(cell);
@@ -177,6 +181,7 @@ function selectCellText(cell: DataGridCell) {
 // Deselect the text of a cell that was previously editable
 function deselectCellText() {
 	const selection = window.getSelection();
+
 	if (selection) {
 		selection.removeAllRanges();
 	}
@@ -186,10 +191,12 @@ function deselectCellText() {
 // underlying data structure of a vscode-data-grid
 function syncCellChanges(cell: DataGridCell) {
 	const column = cell.columnDefinition;
+
 	const row = cell.rowData;
 
 	if (column && row) {
 		const originalValue = row[column.columnDataKey];
+
 		const newValue = cell.innerText;
 
 		if (originalValue !== newValue) {

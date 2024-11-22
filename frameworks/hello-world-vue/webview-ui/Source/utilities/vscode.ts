@@ -49,6 +49,7 @@ class VSCodeAPIWrapper {
 			return this.vsCodeApi.getState();
 		} else {
 			const state = localStorage.getItem("vscodeState");
+
 			return state ? JSON.parse(state) : undefined;
 		}
 	}
@@ -69,6 +70,7 @@ class VSCodeAPIWrapper {
 			return this.vsCodeApi.setState(newState);
 		} else {
 			localStorage.setItem("vscodeState", JSON.stringify(newState));
+
 			return newState;
 		}
 	}

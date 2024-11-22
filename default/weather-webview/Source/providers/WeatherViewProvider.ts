@@ -42,7 +42,9 @@ export class WeatherViewProvider implements WebviewViewProvider {
 
 	private _getWebviewContent(webview: Webview, extensionUri: Uri) {
 		const webviewUri = getUri(webview, extensionUri, ["out", "webview.js"]);
+
 		const stylesUri = getUri(webview, extensionUri, ["out", "styles.css"]);
+
 		const nonce = getNonce();
 
 		// Tip: Install the es6-string-html VS Code extension to enable code highlighting below
@@ -85,7 +87,9 @@ export class WeatherViewProvider implements WebviewViewProvider {
 	private _setWebviewMessageListener(webviewView: WebviewView) {
 		webviewView.webview.onDidReceiveMessage((message) => {
 			const command = message.command;
+
 			const location = message.location;
+
 			const unit = message.unit;
 
 			switch (command) {
@@ -99,6 +103,7 @@ export class WeatherViewProvider implements WebviewViewProvider {
 									message:
 										"Sorry couldn't get weather at this time...",
 								});
+
 								return;
 							}
 							// Get the weather forecast results
@@ -110,6 +115,7 @@ export class WeatherViewProvider implements WebviewViewProvider {
 							});
 						},
 					);
+
 					break;
 			}
 		});

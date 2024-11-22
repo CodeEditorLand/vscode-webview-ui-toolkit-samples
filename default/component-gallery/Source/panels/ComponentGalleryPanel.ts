@@ -104,6 +104,7 @@ export class ComponentGalleryPanel {
 		// Dispose of all disposables (i.e. commands) associated with the current webview panel
 		while (this._disposables.length) {
 			const disposable = this._disposables.pop();
+
 			if (disposable) {
 				disposable.dispose();
 			}
@@ -123,11 +124,14 @@ export class ComponentGalleryPanel {
 	 */
 	private _getWebviewContent(webview: Webview, extensionUri: Uri) {
 		const webviewUri = getUri(webview, extensionUri, ["out", "webview.js"]);
+
 		const styleUri = getUri(webview, extensionUri, ["out", "style.css"]);
+
 		const codiconUri = getUri(webview, extensionUri, [
 			"out",
 			"codicon.css",
 		]);
+
 		const nonce = getNonce();
 
 		// Note: Since the below HTML is defined within a JavaScript template literal, all of

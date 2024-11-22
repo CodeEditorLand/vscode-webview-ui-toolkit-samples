@@ -45,12 +45,14 @@ let openedNote;
 function setVSCodeMessageListener() {
 	window.addEventListener("message", (event) => {
 		const command = event.data.command;
+
 		const noteData = JSON.parse(event.data.payload);
 
 		switch (command) {
 			case "receiveDataInWebview":
 				openedNote = noteData;
 				renderTags(openedNote.tags);
+
 				break;
 		}
 	});
@@ -58,11 +60,15 @@ function setVSCodeMessageListener() {
 
 function saveNote() {
 	const titleInput = document.getElementById("title") as TextField;
+
 	const noteInput = document.getElementById("content") as TextArea;
+
 	const tagsInput = document.getElementById("tags-input") as TextField;
 
 	const titleInputValue = titleInput?.value;
+
 	const noteInputValue = noteInput?.value;
+
 	const tagsInputValue = tagsInput?.value;
 
 	const noteToUpdate = {
@@ -81,8 +87,10 @@ function saveNote() {
 function renderTags(tags) {
 	const tagsContainer = document.getElementById("tags-container");
 	clearTagGroup(tagsContainer);
+
 	if (tags.length > 0) {
 		addTagsToTagGroup(tags, tagsContainer);
+
 		if (tagsContainer) {
 			tagsContainer.style.marginBottom = "2rem";
 		}

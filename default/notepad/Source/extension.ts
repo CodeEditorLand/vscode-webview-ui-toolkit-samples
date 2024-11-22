@@ -14,6 +14,7 @@ import { getWebviewContent } from "./ui/getWebviewContent";
 
 export function activate(context: ExtensionContext) {
 	let notes: Note[] = [];
+
 	let panel: WebviewPanel | undefined = undefined;
 
 	const notepadDataProvider = new NotepadDataProvider(notes);
@@ -29,11 +30,14 @@ export function activate(context: ExtensionContext) {
 		"notepad.showNoteDetailView",
 		() => {
 			const selectedTreeViewItem = treeView.selection[0];
+
 			const matchingNote = notes.find(
 				(note) => note.id === selectedTreeViewItem.id,
 			);
+
 			if (!matchingNote) {
 				window.showErrorMessage("No matching note found");
+
 				return;
 			}
 
@@ -65,11 +69,15 @@ export function activate(context: ExtensionContext) {
 			// If a panel is open and receives an update message, update the notes array and the panel title/html
 			panel.webview.onDidReceiveMessage((message) => {
 				const command = message.command;
+
 				const note = message.note;
+
 				switch (command) {
 					case "updateNote":
 						const updatedNoteId = note.id;
+
 						const copyOfNotesArray = [...notes];
+
 						const matchingNoteIndex = copyOfNotesArray.findIndex(
 							(note) => note.id === updatedNoteId,
 						);
@@ -84,6 +92,7 @@ export function activate(context: ExtensionContext) {
 									note,
 								)))
 							: null;
+
 						break;
 				}
 			});
@@ -119,6 +128,7 @@ export function activate(context: ExtensionContext) {
 		"notepad.deleteNote",
 		(node: Note) => {
 			const selectedTreeViewItem = node;
+
 			const selectedNoteIndex = notes.findIndex(
 				(note) => note.id === selectedTreeViewItem.id,
 			);
