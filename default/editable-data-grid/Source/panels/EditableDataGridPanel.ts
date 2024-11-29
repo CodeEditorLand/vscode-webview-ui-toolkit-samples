@@ -21,7 +21,9 @@ import { getUri } from "../utilities/getUri";
  */
 export class EditableDataGridPanel {
 	public static currentPanel: EditableDataGridPanel | undefined;
+
 	private readonly _panel: WebviewPanel;
+
 	private _disposables: Disposable[] = [];
 
 	/**

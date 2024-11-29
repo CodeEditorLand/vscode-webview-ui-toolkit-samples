@@ -34,7 +34,9 @@ import { textFieldDemo } from "./demos/text-field";
  */
 export class ComponentGalleryPanel {
 	public static currentPanel: ComponentGalleryPanel | undefined;
+
 	private readonly _panel: WebviewPanel;
+
 	private _disposables: Disposable[] = [];
 
 	/**

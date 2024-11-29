@@ -30,12 +30,14 @@ window.addEventListener("load", main);
 
 function main() {
 	setVSCodeMessageListener();
+
 	vscode.postMessage({ command: "requestNoteData" });
 
 	// To get improved type annotations/IntelliSense the associated class for
 	// a given toolkit component can be imported and used to type cast a reference
 	// to the element (i.e. the `as Button` syntax)
 	const saveButton = document.getElementById("submit-button") as Button;
+
 	saveButton.addEventListener("click", () => saveNote());
 }
 
@@ -51,6 +53,7 @@ function setVSCodeMessageListener() {
 		switch (command) {
 			case "receiveDataInWebview":
 				openedNote = noteData;
+
 				renderTags(openedNote.tags);
 
 				break;
@@ -86,6 +89,7 @@ function saveNote() {
 
 function renderTags(tags) {
 	const tagsContainer = document.getElementById("tags-container");
+
 	clearTagGroup(tagsContainer);
 
 	if (tags.length > 0) {
@@ -111,7 +115,9 @@ function clearTagGroup(tagsContainer) {
 function addTagsToTagGroup(tags, tagsContainer) {
 	for (const tagString of tags) {
 		const vscodeTag = document.createElement("vscode-tag") as Tag;
+
 		vscodeTag.textContent = tagString;
+
 		tagsContainer.appendChild(vscodeTag);
 	}
 }

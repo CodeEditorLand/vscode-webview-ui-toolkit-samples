@@ -38,6 +38,7 @@ function main() {
 	const checkWeatherButton = document.getElementById(
 		"check-weather-button",
 	) as Button;
+
 	checkWeatherButton.addEventListener("click", checkWeather);
 
 	setVSCodeMessageListener();
@@ -68,6 +69,7 @@ function setVSCodeMessageListener() {
 		switch (command) {
 			case "weather":
 				const weatherData = JSON.parse(event.data.payload);
+
 				displayWeatherData(weatherData);
 
 				break;
@@ -89,7 +91,9 @@ function displayLoadingState() {
 
 	if (loading && icon && summary) {
 		loading.classList.remove("hidden");
+
 		icon.classList.add("hidden");
+
 		summary.textContent = "Getting weather...";
 	}
 }
@@ -103,8 +107,11 @@ function displayWeatherData(weatherData) {
 
 	if (loading && icon && summary) {
 		loading.classList.add("hidden");
+
 		icon.classList.remove("hidden");
+
 		icon.textContent = getWeatherIcon(weatherData);
+
 		summary.textContent = getWeatherSummary(weatherData);
 	}
 }
@@ -118,7 +125,9 @@ function displayError(errorMsg) {
 
 	if (loading && icon && summary) {
 		loading.classList.add("hidden");
+
 		icon.classList.add("hidden");
+
 		summary.textContent = errorMsg;
 	}
 }

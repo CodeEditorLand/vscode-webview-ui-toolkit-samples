@@ -81,6 +81,7 @@ function main() {
 			country: "Spain",
 		},
 	];
+
 	basicDataGrid.columnDefinitions = [
 		{ columnDataKey: "name", title: "Name" },
 		{ columnDataKey: "email", title: "Email" },
@@ -94,6 +95,7 @@ function main() {
 
 function initEditableDataGrid(id: string) {
 	const grid = document.getElementById(id) as DataGridCell;
+
 	grid?.addEventListener("cell-focused", (e: Event) => {
 		const cell = e.target as DataGridCell;
 		// Do not continue if `cell` is undefined/null or is not a grid cell
@@ -117,11 +119,14 @@ function initEditableDataGrid(id: string) {
 
 		const handleBlurClosure = () => {
 			syncCellChanges(cell);
+
 			unsetCellEditable(cell);
 			// Remove the blur, keydown, and click event listener _only after_
 			// the cell is no longer focused
 			cell.removeEventListener("blur", handleBlurClosure);
+
 			cell.removeEventListener("keydown", handleKeydownClosure);
+
 			cell.removeEventListener("click", handleClickClosure);
 		};
 
@@ -130,6 +135,7 @@ function initEditableDataGrid(id: string) {
 		// second time the cursor will move to the given position in the string
 		// (versus reselecting the cell text again)
 		cell.addEventListener("click", handleClickClosure, { once: true });
+
 		cell.addEventListener("blur", handleBlurClosure);
 	});
 }
@@ -137,6 +143,7 @@ function initEditableDataGrid(id: string) {
 // Make a given cell editable
 function setCellEditable(cell: DataGridCell) {
 	cell.setAttribute("contenteditable", "true");
+
 	selectCellText(cell);
 }
 
@@ -154,7 +161,9 @@ function handleKeydown(e: KeyboardEvent, cell: DataGridCell) {
 	} else {
 		if (e.key === "Enter" || e.key === "Escape") {
 			e.preventDefault();
+
 			syncCellChanges(cell);
+
 			unsetCellEditable(cell);
 		}
 	}
@@ -163,6 +172,7 @@ function handleKeydown(e: KeyboardEvent, cell: DataGridCell) {
 // Make a given cell non-editable
 function unsetCellEditable(cell: DataGridCell) {
 	cell.setAttribute("contenteditable", "false");
+
 	deselectCellText();
 }
 
@@ -172,8 +182,11 @@ function selectCellText(cell: DataGridCell) {
 
 	if (selection) {
 		const range = document.createRange();
+
 		range.selectNodeContents(cell);
+
 		selection.removeAllRanges();
+
 		selection.addRange(range);
 	}
 }

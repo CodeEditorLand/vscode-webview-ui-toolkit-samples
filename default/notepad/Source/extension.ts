@@ -60,6 +60,7 @@ export function activate(context: ExtensionContext) {
 
 			// If a panel is open, update the HTML with the selected item's content
 			panel.title = matchingNote.title;
+
 			panel.webview.html = getWebviewContent(
 				panel.webview,
 				context.extensionUri,
@@ -81,9 +82,13 @@ export function activate(context: ExtensionContext) {
 						const matchingNoteIndex = copyOfNotesArray.findIndex(
 							(note) => note.id === updatedNoteId,
 						);
+
 						copyOfNotesArray[matchingNoteIndex] = note;
+
 						notes = copyOfNotesArray;
+
 						notepadDataProvider.refresh(notes);
+
 						panel
 							? ((panel.title = note.title),
 								(panel.webview.html = getWebviewContent(
@@ -120,6 +125,7 @@ export function activate(context: ExtensionContext) {
 		};
 
 		notes.push(newNote);
+
 		notepadDataProvider.refresh(notes);
 	});
 
@@ -132,7 +138,9 @@ export function activate(context: ExtensionContext) {
 			const selectedNoteIndex = notes.findIndex(
 				(note) => note.id === selectedTreeViewItem.id,
 			);
+
 			notes.splice(selectedNoteIndex, 1);
+
 			notepadDataProvider.refresh(notes);
 
 			// Close the panel if it's open
@@ -142,6 +150,8 @@ export function activate(context: ExtensionContext) {
 
 	// Add commands to the extension context
 	context.subscriptions.push(openNote);
+
 	context.subscriptions.push(createNote);
+
 	context.subscriptions.push(deleteNote);
 }

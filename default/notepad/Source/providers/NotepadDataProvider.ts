@@ -23,6 +23,7 @@ type TreeDataOnChangeEvent = NotepadNote | undefined | null | void;
  */
 export class NotepadDataProvider implements TreeDataProvider<NotepadNote> {
 	private _onDidChangeTreeData = new EventEmitter<TreeDataOnChangeEvent>();
+
 	readonly onDidChangeTreeData: Event<TreeDataOnChangeEvent> =
 		this._onDidChangeTreeData.event;
 
@@ -36,6 +37,7 @@ export class NotepadDataProvider implements TreeDataProvider<NotepadNote> {
 
 	refresh(notesData: Note[]): void {
 		this._onDidChangeTreeData.fire();
+
 		this.data = notesData.map(
 			(note) => new NotepadNote(note.id, note.title),
 		);
@@ -51,6 +53,7 @@ export class NotepadDataProvider implements TreeDataProvider<NotepadNote> {
 		if (element === undefined) {
 			return this.data;
 		}
+
 		return element.children;
 	}
 
@@ -64,8 +67,11 @@ class NotepadNote extends TreeItem {
 
 	constructor(noteId: string, noteTitle: string) {
 		super(noteTitle);
+
 		this.id = noteId;
+
 		this.iconPath = new ThemeIcon("note");
+
 		this.command = {
 			title: "Open note",
 			command: "notepad.showNoteDetailView",

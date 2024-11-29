@@ -18,6 +18,7 @@ window.addEventListener("load", main);
 function main() {
 	// Set checkbox indeterminate state
 	const checkbox = document.getElementById("basic-checkbox") as Checkbox;
+
 	checkbox.indeterminate = true;
 
 	// Define default data grid
@@ -70,6 +71,7 @@ function main() {
 				columnKey4: "Cell Data",
 			},
 		];
+
 		basicDataGrid.columnDefinitions = [
 			{ columnDataKey: "columnKey1", title: "A Custom Header Title" },
 			{ columnDataKey: "columnKey2", title: "Custom Title" },

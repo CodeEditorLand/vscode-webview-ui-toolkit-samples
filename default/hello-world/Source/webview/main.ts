@@ -38,6 +38,7 @@ function main() {
 	// a given toolkit component can be imported and used to type cast a reference
 	// to the element (i.e. the `as Button` syntax)
 	const howdyButton = document.getElementById("howdy") as Button;
+
 	howdyButton?.addEventListener("click", handleHowdyClick);
 }
 
