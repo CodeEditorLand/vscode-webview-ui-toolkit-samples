@@ -1,12 +1,12 @@
 {
-	"dependencies": {},
-	"devDependencies": {
-		"@types/node": "22.10.1"
-	},
 	"name": "hello-world",
 	"scripts": {
 		"build": "vue-tsc --noEmit && vite build",
 		"preview": "vite preview --port 5050",
 		"start": "vite"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@types/node": "22.10.1"
 	}
 }

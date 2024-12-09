@@ -1,4 +1,11 @@
 {
+	"name": "@codeeditorland/weather-webview",
+	"displayName": "Check the weather",
+	"description": "A sample extension to show off the Webview UI Toolkit for Visual Studio Code being used in a webview view.",
+	"main": "./out/extension.js",
+	"scripts": {
+		"compile": "node ./esbuild.js"
+	},
 	"contributes": {
 		"views": {
 			"explorer": [
@@ -13,18 +20,11 @@
 	"dependencies": {
 		"weather-js": "2.0.0"
 	},
-	"description": "A sample extension to show off the Webview UI Toolkit for Visual Studio Code being used in a webview view.",
 	"devDependencies": {
 		"@types/glob": "8.1.0",
 		"@types/node": "22.10.1",
 		"esbuild": "0.24.0",
 		"esbuild-plugin-copy": "2.1.1",
 		"glob": "11.0.0"
-	},
-	"displayName": "Check the weather",
-	"main": "./out/extension.js",
-	"name": "@codeeditorland/weather-webview",
-	"scripts": {
-		"compile": "node ./esbuild.js"
 	}
 }

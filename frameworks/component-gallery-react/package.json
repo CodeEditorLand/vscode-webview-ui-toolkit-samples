@@ -1,4 +1,14 @@
 {
+	"name": "component-gallery-react",
+	"displayName": "component-gallery-react",
+	"description": "A sample extension to show off all React components in the Webview UI Toolkit for Visual Studio Code.",
+	"main": "./out/extension.js",
+	"scripts": {
+		"build:webview": "cd webview-ui && npm run build",
+		"compile": "tsc -p ./",
+		"install:all": "npm install && cd webview-ui && npm install",
+		"start:webview": "cd webview-ui && npm run start"
+	},
 	"contributes": {
 		"commands": [
 			{
@@ -8,19 +18,9 @@
 		]
 	},
 	"dependencies": {},
-	"description": "A sample extension to show off all React components in the Webview UI Toolkit for Visual Studio Code.",
 	"devDependencies": {
 		"@types/glob": "8.1.0",
 		"@types/node": "22.10.1",
 		"glob": "11.0.0"
-	},
-	"displayName": "component-gallery-react",
-	"main": "./out/extension.js",
-	"name": "component-gallery-react",
-	"scripts": {
-		"build:webview": "cd webview-ui && npm run build",
-		"compile": "tsc -p ./",
-		"install:all": "npm install && cd webview-ui && npm install",
-		"start:webview": "cd webview-ui && npm run start"
 	}
 }
