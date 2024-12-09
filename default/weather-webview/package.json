@@ -23,7 +23,7 @@
 	},
 	"displayName": "Check the weather",
 	"main": "./out/extension.js",
-	"name": "vscode-weather-webview",
+	"name": "@codeeditorland/weather-webview",
 	"scripts": {
 		"compile": "node ./esbuild.js"
 	}
