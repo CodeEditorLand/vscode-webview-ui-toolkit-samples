@@ -19,7 +19,7 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "22.13.1",
+		"@types/node": "22.13.4",
 		"rewire": "7.0.0"
 	}
 }
